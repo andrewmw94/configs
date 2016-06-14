@@ -1,0 +1,2354 @@
+;; Object Checkers/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Checkers/"
+  :tables
+  (list
+    (semanticdb-table "ClangCheckers.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("clang/StaticAnalyzer/Checkers/ClangCheckers.h" include nil nil [343 399])
+            ("clang/StaticAnalyzer/Core/CheckerRegistry.h" include nil nil [400 454])
+            ("ClangSACheckers.h" include nil nil [826 854])
+            ("clang" using (:type ("clang" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [856 878])
+            ("ento" using (:type ("ento" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [879 900])
+            ("registerBuiltinCheckers" function
+               (:parent "ento"
+                :arguments 
+                  ( ("registry" variable
+                       (:reference 1
+                        :type ("CheckerRegistry" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [937 963]))                  
+                :type "void")
+                nil [902 1195]))          
+      :file "ClangCheckers.cpp"
+      :pointmax 1196
+      :fsize 1195
+      :lastmodtime '(22322 35031 376679 553000)
+      :unmatched-syntax nil)
+    (semanticdb-table "ClangSACheckers.h"
+      :file "ClangSACheckers.h"
+      :fsize 1101
+      :lastmodtime '(22322 35031 374679 582000))
+    (semanticdb-table "MallocChecker.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ClangSACheckers.h" include nil nil [558 586])
+            ("InterCheckerAPI.h" include nil nil [587 615])
+            ("clang/AST/Attr.h" include nil nil [616 643])
+            ("clang/AST/ParentMap.h" include nil nil [644 676])
+            ("clang/Basic/SourceManager.h" include nil nil [677 715])
+            ("clang/Basic/TargetInfo.h" include nil nil [716 751])
+            ("clang/StaticAnalyzer/Core/BugReporter/BugType.h" include nil nil [752 810])
+            ("clang/StaticAnalyzer/Core/Checker.h" include nil nil [811 857])
+            ("clang/StaticAnalyzer/Core/CheckerManager.h" include nil nil [858 911])
+            ("clang/StaticAnalyzer/Core/PathSensitive/CallEvent.h" include nil nil [912 974])
+            ("clang/StaticAnalyzer/Core/PathSensitive/CheckerContext.h" include nil nil [975 1042])
+            ("clang/StaticAnalyzer/Core/PathSensitive/ProgramState.h" include nil nil [1043 1108])
+            ("clang/StaticAnalyzer/Core/PathSensitive/ProgramStateTrait.h" include nil nil [1109 1179])
+            ("clang/StaticAnalyzer/Core/PathSensitive/SymbolManager.h" include nil nil [1180 1246])
+            ("llvm/ADT/ImmutableMap.h" include nil nil [1247 1281])
+            ("llvm/ADT/STLExtras.h" include nil nil [1282 1313])
+            ("llvm/ADT/SmallString.h" include nil nil [1314 1347])
+            ("llvm/ADT/StringExtras.h" include nil nil [1348 1382])
+            ("climits" include (:system-flag t) nil [1383 1401])
+            ("clang" using (:type ("clang" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1403 1425])
+            ("ento" using (:type ("ento" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1426 1447])
+            ("unnamed" type
+               (:members 
+                  ( ("AllocationFamily" type
+                       (:members 
+                          ( ("AF_None" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1557 1565])
+                            ("AF_Malloc" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1568 1578])
+                            ("AF_CXXNew" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1581 1591])
+                            ("AF_CXXNewArray" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1594 1609])
+                            ("AF_IfNameIndex" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1612 1627])
+                            ("AF_Alloca" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1630 1641]))                          
+                        :type "enum")
+                        (reparse-symbol namespacesubparts) [1531 1642])
+                    ("RefState" type
+                       (:members 
+                          ( ("Kind" type
+                               (:members 
+                                  ( ("Allocated" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [1723 1733])
+                                    ("AllocatedOfSizeZero" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [1801 1821])
+                                    ("Released" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [1889 1898])
+                                    ("Relinquished" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [2068 2081])
+                                    ("Escaped" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [2311 2322]))                                  
+                                :type "enum")
+                                (reparse-symbol classsubparts) [1663 2323])
+                            ("S" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("Stmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2327 2341])
+                            ("K" variable
+                               (:suffix ":3"
+                                :type "unsigned int")
+                                (reparse-symbol classsubparts) [2344 2359])
+                            ("Family" variable
+                               (:suffix ":29"
+                                :type "unsigned int")
+                                (reparse-symbol classsubparts) [2402 2423])
+                            ("RefState" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("k" variable (:type ("Kind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2524 2531])
+                                    ("s" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("Stmt" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2532 2546])
+                                    ("family" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2547 2563]))                                  
+                                :type ("RefState" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2515 2633])
+                            ("public" label nil (reparse-symbol classsubparts) [2634 2641])
+                            ("isAllocated" function (:type "bool") (reparse-symbol classsubparts) [2644 2695])
+                            ("isAllocatedOfSizeZero" function (:type "bool") (reparse-symbol classsubparts) [2698 2769])
+                            ("isReleased" function (:type "bool") (reparse-symbol classsubparts) [2772 2821])
+                            ("isRelinquished" function (:type "bool") (reparse-symbol classsubparts) [2824 2881])
+                            ("isEscaped" function (:type "bool") (reparse-symbol classsubparts) [2884 2931])
+                            ("getAllocationFamily" function (:type ("AllocationFamily" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2934 3021])
+                            ("getStmt" function
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("Stmt" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3024 3065])
+                            ("==" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("X" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("RefState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3085 3103]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [3069 3170])
+                            ("getAllocated" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("family" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3203 3219])
+                                    ("s" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("Stmt" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3220 3234]))                                  
+                                :type ("RefState" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3174 3283])
+                            ("getAllocatedOfSizeZero" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("RS" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("RefState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3325 3344]))                                  
+                                :type ("RefState" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3286 3454])
+                            ("getReleased" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("family" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3485 3501])
+                                    ("s" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("Stmt" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3502 3516]))                                  
+                                :type ("RefState" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3457 3564])
+                            ("getRelinquished" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("family" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3599 3615])
+                                    ("s" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("Stmt" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3616 3630]))                                  
+                                :type ("RefState" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3567 3682])
+                            ("getEscaped" function
+                               (:typemodifiers ("static")
+                                :arguments 
+                                  ( ("RS" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("RefState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3712 3731]))                                  
+                                :type ("RefState" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3685 3809])
+                            ("Profile" function
+                               (:arguments 
+                                  ( ("ID" variable
+                                       (:reference 1
+                                        :type ("llvm::FoldingSetNodeID" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3826 3853]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3813 3936])
+                            ("dump" function
+                               (:arguments 
+                                  ( ("OS" variable
+                                       (:reference 1
+                                        :type ("raw_ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3950 3966]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3940 4174])
+                            ("dump" function (:type "void") (reparse-symbol classsubparts) [4195 4236]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1644 4239])
+                    ("ReallocPairKind" type
+                       (:members 
+                          ( ("RPToBeFreedAfterFailure" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [4266 4290])
+                            ("RPIsFreeOnFailure" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [4350 4368])
+                            ("RPDoNotTrackAfterFailure" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [4439 4465]))                          
+                        :type "enum")
+                        (reparse-symbol namespacesubparts) [4241 4466])
+                    ("ReallocPair" type
+                       (:members 
+                          ( ("ReallocatedSym" variable (:type ("SymbolRef" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4713 4738])
+                            ("Kind" variable (:type ("ReallocPairKind" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4741 4762])
+                            ("ReallocPair" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("S" variable (:type ("SymbolRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4778 4790])
+                                    ("K" variable (:type ("ReallocPairKind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4791 4809]))                                  
+                                :type ("ReallocPair" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [4766 4845])
+                            ("Profile" function
+                               (:arguments 
+                                  ( ("ID" variable
+                                       (:reference 1
+                                        :type ("llvm::FoldingSetNodeID" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4861 4888]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [4848 4960])
+                            ("==" function
+                               (:operator-flag t
+                                :arguments 
+                                  ( ("X" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ReallocPair" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4979 5000]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [4963 5088]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [4640 5091])
+                    ("LeakInfo" type
+                       (:typedef ("std::pair" type
+                             (:template-specifier 
+                                ( ("ExplodedNode" type
+                                     (:pointer 1
+                                      :constant-flag t)
+                                      nil nil)
+                                  ("MemRegion" type
+                                     (:pointer 1
+                                      :constant-flag t)
+                                      nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [5093 5159])
+                    ("MallocChecker" type
+                       (:superclasses 
+                          ( ("Checker" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [5890 5897])
+                            ("MallocChecker" function
+                               (:constructor-flag t
+                                :type ("MallocChecker" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5900 6316])
+                            ("CheckKind" type
+                               (:members 
+                                  ( ("CK_MallocChecker" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [6455 6472])
+                                    ("CK_NewDeleteChecker" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [6477 6497])
+                                    ("CK_NewDeleteLeaksChecker" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [6502 6527])
+                                    ("CK_MismatchedDeallocatorChecker" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [6532 6564])
+                                    ("CK_NumCheckKinds" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [6569 6589]))                                  
+                                :type "enum")
+                                (reparse-symbol classsubparts) [6434 6590])
+                            ("MemoryOperationKind" type (:type "class") (reparse-symbol classsubparts) [6599 6675])
+                            ("IsOptimistic" variable (:type ("DefaultBool" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6679 6704])
+                            ("ChecksEnabled" variable
+                               (:dereference 1
+                                :type ("DefaultBool" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6708 6752])
+                            ("CheckNames" variable
+                               (:dereference 1
+                                :type ("CheckName" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6755 6794])
+                            ("checkPreCall" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("Call" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("CallEvent" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6816 6838])
+                                    ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6839 6857]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [6798 6864])
+                            ("checkPostStmt" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("CE" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("CallExpr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6886 6905])
+                                    ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6906 6924]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [6867 6931])
+                            ("checkPostStmt" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("NE" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("CXXNewExpr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6953 6974])
+                                    ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6975 6993]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [6934 7000])
+                            ("checkPreStmt" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("DE" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("CXXDeleteExpr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7021 7045])
+                                    ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7046 7064]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [7003 7071])
+                            ("checkPostObjCMessage" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("Call" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ObjCMethodCall" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7100 7127])
+                                    ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7128 7146]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [7074 7153])
+                            ("checkPostStmt" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("BE" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("BlockExpr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7175 7195])
+                                    ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7196 7214]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [7156 7221])
+                            ("checkDeadSymbols" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("SymReaper" variable
+                                       (:reference 1
+                                        :type ("SymbolReaper" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7246 7270])
+                                    ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7271 7289]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [7224 7296])
+                            ("checkPreStmt" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("S" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("ReturnStmt" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7317 7337])
+                                    ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7338 7356]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [7299 7363])
+                            ("evalAssume" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("state" variable (:type ("ProgramStateRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7393 7415])
+                                    ("Cond" variable (:type ("SVal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7416 7426])
+                                    ("Assumption" variable (:type "bool") (reparse-symbol arg-sub-list) [7455 7471]))                                  
+                                :type ("ProgramStateRef" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7366 7478])
+                            ("checkLocation" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("l" variable (:type ("SVal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7500 7507])
+                                    ("isLoad" variable (:type "bool") (reparse-symbol arg-sub-list) [7508 7520])
+                                    ("S" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("Stmt" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7521 7535])
+                                    ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7557 7575]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [7481 7582])
+                            ("checkPointerEscape" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("State" variable (:type ("ProgramStateRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7621 7643])
+                                    ("Escaped" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("InvalidatedSymbols" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7680 7714])
+                                    ("Call" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("CallEvent" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7751 7773])
+                                    ("Kind" variable (:type ("PointerEscapeKind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7810 7833]))                                  
+                                :type ("ProgramStateRef" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7586 7840])
+                            ("checkConstPointerEscape" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("State" variable (:type ("ProgramStateRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7883 7905])
+                                    ("Escaped" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("InvalidatedSymbols" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7948 7982])
+                                    ("Call" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("CallEvent" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8025 8047])
+                                    ("Kind" variable (:type ("PointerEscapeKind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8090 8113]))                                  
+                                :type ("ProgramStateRef" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7843 8120])
+                            ("override" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [8232 8247])
+                            ("private" label nil (reparse-symbol classsubparts) [8249 8257])
+                            ("BT_DoubleFree" variable
+                               (:dereference 1
+                                :typemodifiers ("mutable")
+                                :type ("std::unique_ptr" type
+                                     (:template-specifier 
+                                        ( ("BugType" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [8260 8325])
+                            ("BT_DoubleDelete" variable
+                               (:typemodifiers ("mutable")
+                                :type ("std::unique_ptr" type
+                                     (:template-specifier 
+                                        ( ("BugType" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [8328 8377])
+                            ("BT_Leak" variable
+                               (:dereference 1
+                                :typemodifiers ("mutable")
+                                :type ("std::unique_ptr" type
+                                     (:template-specifier 
+                                        ( ("BugType" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [8380 8439])
+                            ("BT_UseFree" variable
+                               (:dereference 1
+                                :typemodifiers ("mutable")
+                                :type ("std::unique_ptr" type
+                                     (:template-specifier 
+                                        ( ("BugType" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [8442 8504])
+                            ("BT_BadFree" variable
+                               (:dereference 1
+                                :typemodifiers ("mutable")
+                                :type ("std::unique_ptr" type
+                                     (:template-specifier 
+                                        ( ("BugType" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [8507 8569])
+                            ("BT_FreeAlloca" variable
+                               (:dereference 1
+                                :typemodifiers ("mutable")
+                                :type ("std::unique_ptr" type
+                                     (:template-specifier 
+                                        ( ("BugType" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [8572 8637])
+                            ("BT_MismatchedDealloc" variable
+                               (:typemodifiers ("mutable")
+                                :type ("std::unique_ptr" type
+                                     (:template-specifier 
+                                        ( ("BugType" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [8640 8694])
+                            ("BT_OffsetFree" variable
+                               (:dereference 1
+                                :typemodifiers ("mutable")
+                                :type ("std::unique_ptr" type
+                                     (:template-specifier 
+                                        ( ("BugType" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [8697 8762])
+                            ("BT_UseZerroAllocated" variable
+                               (:dereference 1
+                                :typemodifiers ("mutable")
+                                :type ("std::unique_ptr" type
+                                     (:template-specifier 
+                                        ( ("BugType" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [8765 8837])
+                            ("II_alloca" variable
+                               (:pointer 1
+                                :typemodifiers ("mutable")
+                                :type ("IdentifierInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8840 9185])
+                            ("II_win_alloca" variable
+                               (:pointer 1
+                                :typemodifiers ("mutable")
+                                :type ("IdentifierInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8840 9185])
+                            ("II_malloc" variable
+                               (:pointer 1
+                                :typemodifiers ("mutable")
+                                :type ("IdentifierInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8840 9185])
+                            ("II_free" variable
+                               (:pointer 1
+                                :typemodifiers ("mutable")
+                                :type ("IdentifierInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8840 9185])
+                            ("II_realloc" variable
+                               (:pointer 1
+                                :typemodifiers ("mutable")
+                                :type ("IdentifierInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8840 9185])
+                            ("II_calloc" variable
+                               (:pointer 1
+                                :typemodifiers ("mutable")
+                                :type ("IdentifierInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8840 9185])
+                            ("II_valloc" variable
+                               (:pointer 1
+                                :typemodifiers ("mutable")
+                                :type ("IdentifierInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8840 9185])
+                            ("II_reallocf" variable
+                               (:pointer 1
+                                :typemodifiers ("mutable")
+                                :type ("IdentifierInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8840 9185])
+                            ("II_strndup" variable
+                               (:pointer 1
+                                :typemodifiers ("mutable")
+                                :type ("IdentifierInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8840 9185])
+                            ("II_strdup" variable
+                               (:pointer 1
+                                :typemodifiers ("mutable")
+                                :type ("IdentifierInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8840 9185])
+                            ("II_win_strdup" variable
+                               (:pointer 1
+                                :typemodifiers ("mutable")
+                                :type ("IdentifierInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8840 9185])
+                            ("II_kmalloc" variable
+                               (:pointer 1
+                                :typemodifiers ("mutable")
+                                :type ("IdentifierInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8840 9185])
+                            ("II_if_nameindex" variable
+                               (:pointer 1
+                                :typemodifiers ("mutable")
+                                :type ("IdentifierInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8840 9185])
+                            ("II_if_freenameindex" variable
+                               (:pointer 1
+                                :typemodifiers ("mutable")
+                                :type ("IdentifierInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8840 9185])
+                            ("II_wcsdup" variable
+                               (:pointer 1
+                                :typemodifiers ("mutable")
+                                :type ("IdentifierInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8840 9185])
+                            ("II_win_wcsdup" variable
+                               (:pointer 1
+                                :typemodifiers ("mutable")
+                                :type ("IdentifierInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8840 9185])
+                            ("KernelZeroFlagVal" variable
+                               (:typemodifiers ("mutable")
+                                :type ("Optional" type
+                                     (:template-specifier 
+                                        ( ("uint64_t" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [9188 9233])
+                            ("initIdentifierInfo" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("C" variable
+                                       (:reference 1
+                                        :type ("ASTContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9261 9275]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [9237 9282])
+                            ("getAllocationFamily" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9383 9401])
+                                    ("S" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("Stmt" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9402 9416]))                                  
+                                :type ("AllocationFamily" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9346 9423])
+                            ("printAllocDeallocName" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("os" variable
+                                       (:reference 1
+                                        :type ("raw_ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9549 9565])
+                                    ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9566 9584])
+                                    ("E" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("Expr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9614 9628]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [9522 9635])
+                            ("printExpectedAllocName" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("os" variable
+                                       (:reference 1
+                                        :type ("raw_ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9786 9802])
+                                    ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9803 9821])
+                                    ("DeallocExpr" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("Expr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9852 9876]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [9758 9883])
+                            ("printExpectedDeallocName" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("os" variable
+                                       (:reference 1
+                                        :type ("raw_ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10005 10021])
+                                    ("Family" variable (:type ("AllocationFamily" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10022 10046]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [9975 10053])
+                            ("isMemFunction" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("FD" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("FunctionDecl" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10207 10230])
+                                    ("C" variable
+                                       (:reference 1
+                                        :type ("ASTContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10231 10245]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [10188 10252])
+                            ("isCMemFunction" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("FD" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("FunctionDecl" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10275 10298])
+                                    ("C" variable
+                                       (:reference 1
+                                        :type ("ASTContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10321 10335])
+                                    ("Family" variable (:type ("AllocationFamily" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10358 10382])
+                                    ("MemKind" variable (:type ("MemoryOperationKind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10405 10433]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [10255 10440])
+                            ("isStandardNewDelete" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("FD" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("FunctionDecl" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10468 10491])
+                                    ("C" variable
+                                       (:reference 1
+                                        :type ("ASTContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10492 10506]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [10443 10513])
+                            ("ProcessZeroAllocation" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10609 10627])
+                                    ("E" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("Expr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10628 10642])
+                                    ("AllocationSizeArg" variable
+                                       (:constant-flag t
+                                        :type "unsigned int")
+                                        (reparse-symbol arg-sub-list) [10683 10716])
+                                    ("State" variable (:type ("ProgramStateRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10757 10779]))                                  
+                                :type ("ProgramStateRef" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [10571 10786])
+                            ("MallocMemReturnsAttr" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10827 10845])
+                                    ("CE" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("CallExpr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10885 10904])
+                                    ("Att" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("OwnershipAttr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10944 10969])
+                                    ("State" variable (:type ("ProgramStateRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11009 11031]))                                  
+                                :type ("ProgramStateRef" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [10790 11038])
+                            ("MallocMemAux" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11077 11095])
+                                    ("CE" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("CallExpr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11096 11115])
+                                    ("SizeEx" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("Expr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11154 11173])
+                                    ("Init" variable (:type ("SVal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11174 11184])
+                                    ("State" variable (:type ("ProgramStateRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11223 11245])
+                                    ("Family" variable
+                                       (:default-value "AF_Malloc"
+                                        :type ("AllocationFamily" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11284 11319]))                                  
+                                :type ("ProgramStateRef" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [11041 11321])
+                            ("MallocMemAux" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11360 11378])
+                                    ("CE" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("CallExpr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11379 11398])
+                                    ("SizeEx" variable (:type ("SVal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11437 11449])
+                                    ("Init" variable (:type ("SVal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11450 11460])
+                                    ("State" variable (:type ("ProgramStateRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11499 11521])
+                                    ("Family" variable
+                                       (:default-value "AF_Malloc"
+                                        :type ("AllocationFamily" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11560 11595]))                                  
+                                :type ("ProgramStateRef" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [11324 11597])
+                            ("performKernelMalloc" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("CE" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("CallExpr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11789 11808])
+                                    ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11809 11827])
+                                    ("State" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("ProgramStateRef" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11850 11879]))                                  
+                                :type ("llvm::Optional" type
+                                     (:template-specifier 
+                                        ( ("ProgramStateRef" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [11735 11886])
+                            ("MallocUpdateRefState" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12000 12018])
+                                    ("E" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("Expr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12019 12033])
+                                    ("State" variable (:type ("ProgramStateRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12034 12056])
+                                    ("Family" variable
+                                       (:default-value "AF_Malloc"
+                                        :type ("AllocationFamily" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12080 12115]))                                  
+                                :type ("ProgramStateRef" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [11954 12117])
+                            ("FreeMemAttr" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12149 12167])
+                                    ("CE" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("CallExpr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12168 12187])
+                                    ("Att" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("OwnershipAttr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12218 12243])
+                                    ("State" variable (:type ("ProgramStateRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12274 12296]))                                  
+                                :type ("ProgramStateRef" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [12121 12303])
+                            ("FreeMemAux" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12333 12351])
+                                    ("CE" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("CallExpr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12352 12371])
+                                    ("state" variable (:type ("ProgramStateRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12401 12423])
+                                    ("Num" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [12424 12437])
+                                    ("Hold" variable (:type "bool") (reparse-symbol arg-sub-list) [12467 12477])
+                                    ("ReleasedAllocated" variable
+                                       (:reference 1
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [12507 12531])
+                                    ("ReturnsNullOnFailure" variable
+                                       (:default-value "false"
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [12561 12594]))                                  
+                                :type ("ProgramStateRef" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [12306 12602])
+                            ("FreeMemAux" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12632 12650])
+                                    ("Arg" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("Expr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12651 12667])
+                                    ("ParentExpr" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("Expr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12697 12720])
+                                    ("State" variable (:type ("ProgramStateRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12750 12772])
+                                    ("Hold" variable (:type "bool") (reparse-symbol arg-sub-list) [12802 12812])
+                                    ("ReleasedAllocated" variable
+                                       (:reference 1
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [12842 12866])
+                                    ("ReturnsNullOnFailure" variable
+                                       (:default-value "false"
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [12896 12929]))                                  
+                                :type ("ProgramStateRef" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [12605 12937])
+                            ("ReallocMem" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12968 12986])
+                                    ("CE" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("CallExpr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [12987 13006])
+                                    ("FreesMemOnFailure" variable (:type "bool") (reparse-symbol arg-sub-list) [13036 13059])
+                                    ("State" variable (:type ("ProgramStateRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13089 13111]))                                  
+                                :type ("ProgramStateRef" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [12941 13118])
+                            ("CallocMem" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [13154 13172])
+                                    ("CE" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("CallExpr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [13173 13192])
+                                    ("State" variable (:type ("ProgramStateRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13228 13250]))                                  
+                                :type ("ProgramStateRef" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [13121 13251])
+                            ("isReleased" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("Sym" variable (:type ("SymbolRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13345 13359])
+                                    ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [13360 13378]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [13329 13385])
+                            ("checkUseAfterFree" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("Sym" variable (:type ("SymbolRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13412 13426])
+                                    ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [13427 13445])
+                                    ("S" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("Stmt" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [13446 13460]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [13389 13467])
+                            ("checkUseZeroAllocated" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("Sym" variable (:type ("SymbolRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13498 13512])
+                                    ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [13513 13531])
+                                    ("S" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("Stmt" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [13561 13575]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [13471 13582])
+                            ("checkDoubleDelete" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("Sym" variable (:type ("SymbolRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13609 13623])
+                                    ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [13624 13642]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [13586 13649])
+                            ("mayFreeAnyEscapedMemoryOrIsModeledExplicitly" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("Call" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("CallEvent" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [14197 14219])
+                                    ("State" variable (:type ("ProgramStateRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14255 14277])
+                                    ("EscapingSymbol" variable
+                                       (:reference 1
+                                        :type ("SymbolRef" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [14313 14339]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [14147 14346])
+                            ("checkPointerEscapeAux" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("State" variable (:type ("ProgramStateRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14445 14467])
+                                    ("Escaped" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("InvalidatedSymbols" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [14502 14536])
+                                    ("Call" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("CallEvent" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [14571 14593])
+                                    ("Kind" variable (:type ("PointerEscapeKind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14628 14651])
+                                    ("CheckRefState" function
+                                       (:function-pointer t
+                                        :arguments 
+                                          ( ("" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type ("RefState" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [14707 14723]))                                          
+                                        :type "bool")
+                                        nil nil))                                  
+                                :type ("ProgramStateRef" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [14407 14731])
+                            ("getCheckIfTracked" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("Family" variable (:type ("AllocationFamily" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14953 14977])
+                                    ("IsALeakCheck" variable
+                                       (:default-value "false"
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [15018 15043]))                                  
+                                :type ("Optional" type
+                                     (:template-specifier 
+                                        ( ("CheckKind" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [14915 15051])
+                            ("getCheckIfTracked" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [15092 15110])
+                                    ("AllocDeallocStmt" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("Stmt" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [15151 15180])
+                                    ("IsALeakCheck" variable
+                                       (:default-value "false"
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [15221 15246]))                                  
+                                :type ("Optional" type
+                                     (:template-specifier 
+                                        ( ("CheckKind" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [15054 15254])
+                            ("getCheckIfTracked" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [15295 15313])
+                                    ("Sym" variable (:type ("SymbolRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15314 15328])
+                                    ("IsALeakCheck" variable
+                                       (:default-value "false"
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [15369 15394]))                                  
+                                :type ("Optional" type
+                                     (:template-specifier 
+                                        ( ("CheckKind" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [15257 15402])
+                            ("SummarizeValue" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("os" variable
+                                       (:reference 1
+                                        :type ("raw_ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [15440 15456])
+                                    ("V" variable (:type ("SVal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15457 15464]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [15413 15465])
+                            ("SummarizeRegion" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("os" variable
+                                       (:reference 1
+                                        :type ("raw_ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [15496 15512])
+                                    ("MR" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("MemRegion" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [15513 15533]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [15468 15534])
+                            ("ReportBadFree" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [15556 15574])
+                                    ("ArgVal" variable (:type ("SVal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15575 15587])
+                                    ("Range" variable (:type ("SourceRange" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15588 15606])
+                                    ("DeallocExpr" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("Expr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [15628 15652]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [15537 15659])
+                            ("ReportFreeAlloca" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [15684 15702])
+                                    ("ArgVal" variable (:type ("SVal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15703 15715])
+                                    ("Range" variable (:type ("SourceRange" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15740 15758]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [15662 15765])
+                            ("ReportMismatchedDealloc" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [15797 15815])
+                                    ("Range" variable (:type ("SourceRange" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15816 15834])
+                                    ("DeallocExpr" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("Expr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [15866 15890])
+                                    ("RS" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("RefState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [15891 15910])
+                                    ("Sym" variable (:type ("SymbolRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15942 15956])
+                                    ("OwnershipTransferred" variable (:type "bool") (reparse-symbol arg-sub-list) [15957 15983]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [15768 15990])
+                            ("ReportOffsetFree" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [16015 16033])
+                                    ("ArgVal" variable (:type ("SVal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16034 16046])
+                                    ("Range" variable (:type ("SourceRange" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16047 16065])
+                                    ("DeallocExpr" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("Expr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [16090 16114])
+                                    ("AllocExpr" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :default-value "nullptr"
+                                        :type ("Expr" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [16139 16170]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [15993 16178])
+                            ("ReportUseAfterFree" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [16205 16223])
+                                    ("Range" variable (:type ("SourceRange" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16224 16242])
+                                    ("Sym" variable (:type ("SymbolRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16269 16283]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [16181 16290])
+                            ("ReportDoubleFree" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [16315 16333])
+                                    ("Range" variable (:type ("SourceRange" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16334 16352])
+                                    ("Released" variable (:type "bool") (reparse-symbol arg-sub-list) [16353 16367])
+                                    ("Sym" variable (:type ("SymbolRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16392 16406])
+                                    ("PrevSym" variable (:type ("SymbolRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16407 16425]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [16293 16432])
+                            ("ReportDoubleDelete" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [16460 16478])
+                                    ("Sym" variable (:type ("SymbolRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16479 16493]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [16436 16500])
+                            ("ReportUseZeroAllocated" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [16532 16550])
+                                    ("Range" variable (:type ("SourceRange" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16551 16569])
+                                    ("Sym" variable (:type ("SymbolRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16600 16614]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [16504 16621])
+                            ("getAllocationSite" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("N" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("ExplodedNode" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [16752 16774])
+                                    ("Sym" variable (:type ("SymbolRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16775 16789])
+                                    ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [16819 16837]))                                  
+                                :type ("LeakInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [16725 16844])
+                            ("reportLeak" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("Sym" variable (:type ("SymbolRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16864 16878])
+                                    ("N" variable
+                                       (:pointer 1
+                                        :type ("ExplodedNode" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [16879 16895])
+                                    ("C" variable
+                                       (:reference 1
+                                        :type ("CheckerContext" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [16896 16914]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [16848 16921])
+                            ("BugReporterVisitorImpl" variable (:type "int") (reparse-symbol classsubparts) [17135 21415]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [5161 21418]))                  
+                :type "namespace")
+                nil [1449 21420])
+            ("unnamed" type
+               (:members 
+                  ( ("SymbolVisitor" variable (:type "int") (reparse-symbol namespacesubparts) [21875 22149]))                  
+                :type "namespace")
+                nil [21821 22151])
+            ("initIdentifierInfo" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("Ctx" variable
+                       (:reference 1
+                        :type ("ASTContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22219 22235]))                  
+                :type "void")
+                nil [22180 23046])
+            ("isMemFunction" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("FD" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("FunctionDecl" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23082 23105])
+                    ("C" variable
+                       (:reference 1
+                        :type ("ASTContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23106 23120]))                  
+                :type "bool")
+                nil [23048 23467])
+            ("isCMemFunction" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("FD" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("FunctionDecl" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23504 23527])
+                    ("C" variable
+                       (:reference 1
+                        :type ("ASTContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23563 23577])
+                    ("Family" variable (:type ("AllocationFamily" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [23613 23637])
+                    ("MemKind" variable (:type ("MemoryOperationKind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [23673 23701]))                  
+                :type "bool")
+                nil [23469 25455])
+            ("isStandardNewDelete" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("FD" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("FunctionDecl" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [25712 25735])
+                    ("C" variable
+                       (:reference 1
+                        :type ("ASTContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [25776 25790]))                  
+                :type "bool")
+                nil [25672 26569])
+            ("performKernelMalloc" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("CE" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CallExpr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26641 26660])
+                    ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26661 26679])
+                    ("State" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ProgramStateRef" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26680 26709]))                  
+                :type ("llvm::Optional" type
+                     (:template-specifier 
+                        ( ("ProgramStateRef" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [26571 29398])
+            ("checkPostStmt" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("CE" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CallExpr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [29434 29453])
+                    ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [29454 29472]))                  
+                :type "void")
+                nil [29400 33938])
+            ("ProcessZeroAllocation" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [34034 34052])
+                    ("E" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("Expr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [34100 34114])
+                    ("AllocationSizeArg" variable
+                       (:constant-flag t
+                        :type "unsigned int")
+                        (reparse-symbol arg-sub-list) [34162 34195])
+                    ("State" variable (:type ("ProgramStateRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [34243 34265]))                  
+                :type ("ProgramStateRef" type (:type "class") nil nil))
+                nil [33981 36009])
+            ("getDeepPointeeType" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("T" variable (:type ("QualType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [36046 36057]))                  
+                :type ("QualType" type (:type "class") nil nil))
+                nil [36011 36249])
+            ("treatUnusedNewEscaped" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("NE" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CXXNewExpr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [36285 36306]))                  
+                :type "bool")
+                nil [36251 36927])
+            ("checkPostStmt" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("NE" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CXXNewExpr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [36963 36984])
+                    ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [37019 37037]))                  
+                :type "void")
+                nil [36929 38019])
+            ("checkPreStmt" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("DE" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CXXDeleteExpr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [38054 38078])
+                    ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [38112 38130]))                  
+                :type "void")
+                nil [38021 38593])
+            ("isKnownDeallocObjCMethodName" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("Call" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ObjCMethodCall" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [38636 38663]))                  
+                :type "bool")
+                nil [38595 39184])
+            ("getFreeWhenDoneArg" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("Call" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ObjCMethodCall" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [39227 39254]))                  
+                :type ("Optional" type
+                     (:template-specifier 
+                        ( ("bool" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [39186 39535])
+            ("checkPostObjCMessage" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("Call" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ObjCMethodCall" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [39578 39605])
+                    ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [39647 39665]))                  
+                :type "void")
+                nil [39537 40199])
+            ("MallocMemReturnsAttr" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [40253 40271])
+                    ("CE" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CallExpr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [40272 40291])
+                    ("Att" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("OwnershipAttr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [40328 40353])
+                    ("State" variable (:type ("ProgramStateRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [40390 40412]))                  
+                :type ("ProgramStateRef" type (:type "class") nil nil))
+                nil [40201 40748])
+            ("MallocMemAux" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [40794 40812])
+                    ("CE" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CallExpr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [40857 40876])
+                    ("SizeEx" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("Expr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [40921 40940])
+                    ("Init" variable (:type ("SVal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [40941 40951])
+                    ("State" variable (:type ("ProgramStateRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [40996 41018])
+                    ("Family" variable (:type ("AllocationFamily" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [41063 41087]))                  
+                :type ("ProgramStateRef" type (:type "class") nil nil))
+                nil [40750 41247])
+            ("MallocMemAux" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [41293 41311])
+                    ("CE" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CallExpr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [41355 41374])
+                    ("Size" variable (:type ("SVal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [41418 41428])
+                    ("Init" variable (:type ("SVal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [41429 41439])
+                    ("State" variable (:type ("ProgramStateRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [41483 41505])
+                    ("Family" variable (:type ("AllocationFamily" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [41549 41573]))                  
+                :type ("ProgramStateRef" type (:type "class") nil nil))
+                nil [41249 42971])
+            ("MallocUpdateRefState" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [43025 43043])
+                    ("E" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("Expr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [43096 43110])
+                    ("State" variable (:type ("ProgramStateRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [43163 43185])
+                    ("Family" variable (:type ("AllocationFamily" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [43238 43262]))                  
+                :type ("ProgramStateRef" type (:type "class") nil nil))
+                nil [42973 43669])
+            ("FreeMemAttr" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [43714 43732])
+                    ("CE" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CallExpr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [43776 43795])
+                    ("Att" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("OwnershipAttr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [43839 43864])
+                    ("State" variable (:type ("ProgramStateRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [43908 43930]))                  
+                :type ("ProgramStateRef" type (:type "class") nil nil))
+                nil [43671 44350])
+            ("FreeMemAux" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [44394 44412])
+                    ("CE" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CallExpr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [44455 44474])
+                    ("State" variable (:type ("ProgramStateRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [44517 44539])
+                    ("Num" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [44582 44595])
+                    ("Hold" variable (:type "bool") (reparse-symbol arg-sub-list) [44638 44648])
+                    ("ReleasedAllocated" variable
+                       (:reference 1
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [44691 44715])
+                    ("ReturnsNullOnFailure" variable (:type "bool") (reparse-symbol arg-sub-list) [44758 44784]))                  
+                :type ("ProgramStateRef" type (:type "class") nil nil))
+                nil [44352 45005])
+            ("didPreviousFreeFail" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("State" variable (:type ("ProgramStateRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [45195 45217])
+                    ("Sym" variable (:type ("SymbolRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [45250 45264])
+                    ("RetStatusSymbol" variable
+                       (:reference 1
+                        :type ("SymbolRef" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [45265 45292]))                  
+                :type "bool")
+                nil [45163 45647])
+            ("getAllocationFamily" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [45701 45719])
+                    ("S" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("Stmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [45772 45786]))                  
+                :type ("AllocationFamily" type (:type "class") nil nil))
+                nil [45649 46956])
+            ("printAllocDeallocName" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("os" variable
+                       (:reference 1
+                        :type ("raw_ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [47000 47016])
+                    ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [47017 47035])
+                    ("E" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("Expr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [47078 47092]))                  
+                :type "bool")
+                nil [46958 47975])
+            ("printExpectedAllocName" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("os" variable
+                       (:reference 1
+                        :type ("raw_ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [48020 48036])
+                    ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [48037 48055])
+                    ("E" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("Expr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [48099 48113]))                  
+                :type "void")
+                nil [47977 48489])
+            ("printExpectedDeallocName" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("os" variable
+                       (:reference 1
+                        :type ("raw_ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [48536 48552])
+                    ("Family" variable (:type ("AllocationFamily" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [48598 48622]))                  
+                :type "void")
+                nil [48491 48940])
+            ("FreeMemAux" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [48984 49002])
+                    ("ArgExpr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("Expr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [49045 49065])
+                    ("ParentExpr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("Expr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [49108 49131])
+                    ("State" variable (:type ("ProgramStateRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [49174 49196])
+                    ("Hold" variable (:type "bool") (reparse-symbol arg-sub-list) [49239 49249])
+                    ("ReleasedAllocated" variable
+                       (:reference 1
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [49292 49316])
+                    ("ReturnsNullOnFailure" variable (:type "bool") (reparse-symbol arg-sub-list) [49359 49385]))                  
+                :type ("ProgramStateRef" type (:type "class") nil nil))
+                nil [48942 54605])
+            ("getCheckIfTracked" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("Family" variable (:type ("AllocationFamily" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [54675 54699])
+                    ("IsALeakCheck" variable (:type "bool") (reparse-symbol arg-sub-list) [54733 54751]))                  
+                :type ("Optional" type
+                     (:template-specifier 
+                        ( ("MallocChecker::CheckKind" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [54607 55386])
+            ("getCheckIfTracked" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [55456 55474])
+                    ("AllocDeallocStmt" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("Stmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [55508 55537])
+                    ("IsALeakCheck" variable (:type "bool") (reparse-symbol arg-sub-list) [55571 55589]))                  
+                :type ("Optional" type
+                     (:template-specifier 
+                        ( ("MallocChecker::CheckKind" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [55388 55710])
+            ("getCheckIfTracked" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [55780 55798])
+                    ("Sym" variable (:type ("SymbolRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [55799 55813])
+                    ("IsALeakCheck" variable (:type "bool") (reparse-symbol arg-sub-list) [55847 55865]))                  
+                :type ("Optional" type
+                     (:template-specifier 
+                        ( ("MallocChecker::CheckKind" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [55712 56107])
+            ("SummarizeValue" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("os" variable
+                       (:reference 1
+                        :type ("raw_ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [56144 56160])
+                    ("V" variable (:type ("SVal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [56161 56168]))                  
+                :type "bool")
+                nil [56109 56640])
+            ("SummarizeRegion" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("os" variable
+                       (:reference 1
+                        :type ("raw_ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [56678 56694])
+                    ("MR" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("MemRegion" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [56731 56751]))                  
+                :type "bool")
+                nil [56642 58578])
+            ("ReportBadFree" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [58614 58632])
+                    ("ArgVal" variable (:type ("SVal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [58633 58645])
+                    ("Range" variable (:type ("SourceRange" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [58680 58698])
+                    ("DeallocExpr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("Expr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [58733 58757]))                  
+                :type "void")
+                nil [58580 59984])
+            ("ReportFreeAlloca" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [60023 60041])
+                    ("ArgVal" variable (:type ("SVal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [60042 60054])
+                    ("Range" variable (:type ("SourceRange" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [60092 60110]))                  
+                :type "void")
+                nil [59986 60832])
+            ("ReportMismatchedDealloc" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [60878 60896])
+                    ("Range" variable (:type ("SourceRange" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [60941 60959])
+                    ("DeallocExpr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("Expr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [61004 61028])
+                    ("RS" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("RefState" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [61073 61092])
+                    ("Sym" variable (:type ("SymbolRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [61137 61151])
+                    ("OwnershipTransferred" variable (:type "bool") (reparse-symbol arg-sub-list) [61196 61222]))                  
+                :type "void")
+                nil [60834 62735])
+            ("ReportOffsetFree" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [62774 62792])
+                    ("ArgVal" variable (:type ("SVal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [62793 62805])
+                    ("Range" variable (:type ("SourceRange" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [62843 62861])
+                    ("DeallocExpr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("Expr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [62862 62886])
+                    ("AllocExpr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("Expr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [62924 62946]))                  
+                :type "void")
+                nil [62737 64554])
+            ("ReportUseAfterFree" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [64595 64613])
+                    ("Range" variable (:type ("SourceRange" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [64614 64632])
+                    ("Sym" variable (:type ("SymbolRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [64672 64686]))                  
+                :type "void")
+                nil [64556 65412])
+            ("ReportDoubleFree" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [65451 65469])
+                    ("Range" variable (:type ("SourceRange" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [65470 65488])
+                    ("Released" variable (:type "bool") (reparse-symbol arg-sub-list) [65526 65540])
+                    ("Sym" variable (:type ("SymbolRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [65541 65555])
+                    ("PrevSym" variable (:type ("SymbolRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [65593 65611]))                  
+                :type "void")
+                nil [65414 66446])
+            ("ReportDoubleDelete" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [66487 66505])
+                    ("Sym" variable (:type ("SymbolRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [66506 66520]))                  
+                :type "void")
+                nil [66448 67166])
+            ("ReportUseZeroAllocated" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [67211 67229])
+                    ("Range" variable (:type ("SourceRange" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [67273 67291])
+                    ("Sym" variable (:type ("SymbolRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [67335 67349]))                  
+                :type "void")
+                nil [67168 68135])
+            ("ReallocMem" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [68179 68197])
+                    ("CE" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CallExpr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [68240 68259])
+                    ("FreesOnFail" variable (:type "bool") (reparse-symbol arg-sub-list) [68302 68319])
+                    ("State" variable (:type ("ProgramStateRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [68362 68384]))                  
+                :type ("ProgramStateRef" type (:type "class") nil nil))
+                nil [68137 72044])
+            ("CallocMem" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [72087 72105])
+                    ("CE" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CallExpr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [72106 72125])
+                    ("State" variable (:type ("ProgramStateRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [72167 72189]))                  
+                :type ("ProgramStateRef" type (:type "class") nil nil))
+                nil [72046 72782])
+            ("getAllocationSite" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("N" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("ExplodedNode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [72826 72848])
+                    ("Sym" variable (:type ("SymbolRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [72849 72863])
+                    ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [72897 72915]))                  
+                :type ("LeakInfo" type (:type "class") nil nil))
+                nil [72784 74313])
+            ("reportLeak" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("Sym" variable (:type ("SymbolRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [74346 74360])
+                    ("N" variable
+                       (:pointer 1
+                        :type ("ExplodedNode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [74361 74377])
+                    ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [74409 74427]))                  
+                :type "void")
+                nil [74315 76843])
+            ("checkDeadSymbols" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("SymReaper" variable
+                       (:reference 1
+                        :type ("SymbolReaper" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [76882 76906])
+                    ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [76944 76962]))                  
+                :type "void")
+                nil [76845 78609])
+            ("checkPreCall" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("Call" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("CallEvent" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [78644 78666])
+                    ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [78700 78718]))                  
+                :type "void")
+                nil [78611 80102])
+            ("checkPreStmt" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("S" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("ReturnStmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [80137 80157])
+                    ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [80158 80176]))                  
+                :type "void")
+                nil [80104 80976])
+            ("checkPostStmt" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("BE" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("BlockExpr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [81173 81193])
+                    ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [81228 81246]))                  
+                :type "void")
+                nil [81139 82334])
+            ("isReleased" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("Sym" variable (:type ("SymbolRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [82367 82381])
+                    ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [82382 82400]))                  
+                :type "bool")
+                nil [82336 82520])
+            ("checkUseAfterFree" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("Sym" variable (:type ("SymbolRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [82560 82574])
+                    ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [82575 82593])
+                    ("S" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("Stmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [82632 82646]))                  
+                :type "bool")
+                nil [82522 82776])
+            ("checkUseZeroAllocated" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("Sym" variable (:type ("SymbolRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [82820 82834])
+                    ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [82835 82853])
+                    ("S" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("Stmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [82896 82910]))                  
+                :type "void")
+                nil [82778 83241])
+            ("checkDoubleDelete" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("Sym" variable (:type ("SymbolRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [83281 83295])
+                    ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [83296 83314]))                  
+                :type "bool")
+                nil [83243 83422])
+            ("checkLocation" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("l" variable (:type ("SVal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [83511 83518])
+                    ("isLoad" variable (:type "bool") (reparse-symbol arg-sub-list) [83519 83531])
+                    ("S" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("Stmt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [83532 83546])
+                    ("C" variable
+                       (:reference 1
+                        :type ("CheckerContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [83581 83599]))                  
+                :type "void")
+                nil [83477 83740])
+            ("evalAssume" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("state" variable (:type ("ProgramStateRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [83918 83940])
+                    ("Cond" variable (:type ("SVal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [83987 83997])
+                    ("Assumption" variable (:type "bool") (reparse-symbol arg-sub-list) [84044 84060]))                  
+                :type ("ProgramStateRef" type (:type "class") nil nil))
+                nil [83876 85642])
+            ("mayFreeAnyEscapedMemoryOrIsModeledExplicitly" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("Call" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CallEvent" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [85756 85778])
+                    ("State" variable (:type ("ProgramStateRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [85825 85847])
+                    ("EscapingSymbol" variable
+                       (:reference 1
+                        :type ("SymbolRef" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [85894 85920]))                  
+                :type "bool")
+                nil [85644 92253])
+            ("retTrue" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("RS" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("RefState" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [92275 92294]))                  
+                :type "bool")
+                nil [92255 92313])
+            ("checkIfNewOrNewArrayFamily" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("RS" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("RefState" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [92354 92373]))                  
+                :type "bool")
+                nil [92315 92485])
+            ("checkPointerEscape" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("State" variable (:type ("ProgramStateRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [92537 92559])
+                    ("Escaped" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("InvalidatedSymbols" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [92605 92639])
+                    ("Call" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CallEvent" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [92685 92707])
+                    ("Kind" variable (:type ("PointerEscapeKind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [92753 92776]))                  
+                :type ("ProgramStateRef" type (:type "class") nil nil))
+                nil [92487 92856])
+            ("checkConstPointerEscape" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("State" variable (:type ("ProgramStateRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [92913 92935])
+                    ("Escaped" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("InvalidatedSymbols" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [92982 93016])
+                    ("Call" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CallEvent" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [93063 93085])
+                    ("Kind" variable (:type ("PointerEscapeKind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [93132 93155]))                  
+                :type ("ProgramStateRef" type (:type "class") nil nil))
+                nil [92858 93285])
+            ("checkPointerEscapeAux" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("State" variable (:type ("ProgramStateRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [93340 93362])
+                    ("Escaped" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("InvalidatedSymbols" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [93409 93443])
+                    ("Call" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("CallEvent" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [93490 93512])
+                    ("Kind" variable (:type ("PointerEscapeKind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [93559 93582])
+                    ("CheckRefState" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("RefState" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [93638 93654]))                          
+                        :type "bool")
+                        nil nil))                  
+                :type ("ProgramStateRef" type (:type "class") nil nil))
+                nil [93287 94574])
+            ("findFailedReallocSymbol" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("currState" variable (:type ("ProgramStateRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [94617 94643])
+                    ("prevState" variable (:type ("ProgramStateRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [94685 94711]))                  
+                :type ("SymbolRef" type (:type "class") nil nil))
+                nil [94576 95031])
+            ("VisitNode" function
+               (:pointer 1
+                :parent "MallocChecker::MallocBugVisitor"
+                :arguments 
+                  ( ("N" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("ExplodedNode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [95098 95120])
+                    ("PrevN" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("ExplodedNode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [95164 95190])
+                    ("BRC" variable
+                       (:reference 1
+                        :type ("BugReporterContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [95234 95258])
+                    ("BR" variable
+                       (:reference 1
+                        :type ("BugReport" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [95302 95316]))                  
+                :type ("PathDiagnosticPiece" type (:type "class") nil nil))
+                nil [95033 98485])
+            ("printState" function
+               (:parent "MallocChecker"
+                :arguments 
+                  ( ("Out" variable
+                       (:reference 1
+                        :type ("raw_ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [98518 98535])
+                    ("State" variable (:type ("ProgramStateRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [98536 98558])
+                    ("NL" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [98590 98605])
+                    ("Sep" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [98606 98622]))                  
+                :type "void")
+                nil [98487 99330])
+            ("registerNewDeleteLeaksChecker" function
+               (:parent "ento"
+                :arguments 
+                  ( ("mgr" variable
+                       (:reference 1
+                        :type ("CheckerManager" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [99373 99393]))                  
+                :type "void")
+                nil [99332 100004])
+            ("REGISTER_CHECKER" variable (:constant-flag t) nil [100014 100030])
+            ("MallocChecker" function
+               (:parent "ento"
+                :arguments 
+                  ( ("mgr" variable
+                       (:reference 1
+                        :type ("CheckerManager" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "void")
+                nil [100659 100690])
+            ("NewDeleteChecker" function
+               (:parent "ento"
+                :arguments 
+                  ( ("mgr" variable
+                       (:reference 1
+                        :type ("CheckerManager" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "void")
+                nil [100691 100725])
+            ("MismatchedDeallocatorChecker" function
+               (:parent "ento"
+                :arguments 
+                  ( ("mgr" variable
+                       (:reference 1
+                        :type ("CheckerManager" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "void")
+                nil [100726 100772]))          
+      :file "MallocChecker.cpp"
+      :pointmax 100773
+      :fsize 100772
+      :lastmodtime '(22322 35031 375679 567000)
+      :unmatched-syntax '((PUBLIC 21868 . 21874) (punctuation 21866 . 21867) (symbol 21860 . 21865) (symbol 21839 . 21859) (CLASS 21833 . 21838) (semantic-list 21780 . 21819) (symbol 21750 . 21780) (semantic-list 21613 . 21648) (symbol 21583 . 21613) (semantic-list 21544 . 21582) (symbol 21514 . 21544) (semantic-list 21479 . 21513) (symbol 21449 . 21479) (PUBLIC 17128 . 17134) (punctuation 17126 . 17127) (symbol 17114 . 17119) (symbol 17097 . 17113) (CLASS 17091 . 17096) (semantic-list 8139 . 8231) (symbol 8129 . 8139) (VOID 8124 . 8128) (symbol 6663 . 6670) (punctuation 6657 . 6658) (symbol 6649 . 6657) (punctuation 6643 . 6644) (symbol 6631 . 6643) (symbol 6663 . 6670) (punctuation 6657 . 6658) (symbol 6649 . 6657) (punctuation 6643 . 6644) (symbol 6631 . 6643) (ENUM 6594 . 6598) (symbol 4178 . 4194) (PUBLIC 21868 . 21874) (punctuation 21866 . 21867) (symbol 21860 . 21865) (symbol 21839 . 21859) (CLASS 21833 . 21838) (semantic-list 21780 . 21819) (symbol 21750 . 21780) (semantic-list 21613 . 21648) (symbol 21583 . 21613) (semantic-list 21544 . 21582) (symbol 21514 . 21544) (semantic-list 21479 . 21513) (symbol 21449 . 21479) (PUBLIC 17128 . 17134) (punctuation 17126 . 17127) (symbol 17114 . 17119) (symbol 17097 . 17113) (CLASS 17091 . 17096) (semantic-list 8139 . 8231) (symbol 8129 . 8139) (VOID 8124 . 8128) (symbol 6663 . 6670) (punctuation 6657 . 6658) (symbol 6649 . 6657) (punctuation 6643 . 6644) (symbol 6631 . 6643) (symbol 6663 . 6670) (punctuation 6657 . 6658) (symbol 6649 . 6657) (punctuation 6643 . 6644) (symbol 6631 . 6643) (ENUM 6594 . 6598) (symbol 4178 . 4194) (PUBLIC 21868 . 21874) (punctuation 21866 . 21867) (symbol 21860 . 21865) (symbol 21839 . 21859) (CLASS 21833 . 21838) (semantic-list 21780 . 21819) (symbol 21750 . 21780) (semantic-list 21613 . 21648) (symbol 21583 . 21613) (semantic-list 21544 . 21582) (symbol 21514 . 21544) (semantic-list 21479 . 21513) (symbol 21449 . 21479) (PUBLIC 17128 . 17134) (punctuation 17126 . 17127) (symbol 17114 . 17119) (symbol 17097 . 17113) (CLASS 17091 . 17096) (semantic-list 8139 . 8231) (symbol 8129 . 8139) (VOID 8124 . 8128) (symbol 6663 . 6670) (punctuation 6657 . 6658) (symbol 6649 . 6657) (punctuation 6643 . 6644) (symbol 6631 . 6643) (symbol 6663 . 6670) (punctuation 6657 . 6658) (symbol 6649 . 6657) (punctuation 6643 . 6644) (symbol 6631 . 6643) (ENUM 6594 . 6598) (symbol 4178 . 4194))
+      :lexical-table 
+        '(("REGISTER_CHECKER" (spp-arg-list ("name") 100030 . 100036) . 
+              ((VOID "void" 100089 . 100093) (symbol "ento" 100094 . 100098) (punctuation ":" 100098 . 100099) (punctuation ":" 100099 . 100100) (spp-symbol-merge ((REGISTER "register" 100100 . 100108) (symbol "name" 100110 . 100114)) 100100 . 100114) (semantic-list "(CheckerManager &mgr)" 100114 . 100135) (semantic-list "{                             \\
+    registerCStringCheckerBasic(mgr);                                          \\
+    MallocChecker *checker = mgr.registerChecker<MallocChecker>();             \\
+    checker->IsOptimistic = mgr.getAnalyzerOptions().getBooleanOption(         \\
+        \"Optimistic\", false, checker);                                         \\
+    checker->ChecksEnabled[MallocChecker::CK_##name] = true;                   \\
+    checker->CheckNames[MallocChecker::CK_##name] = mgr.getCurrentCheckName(); \\
+  }" 100136 . 100657)))
+          )
+)
+    (semanticdb-table "InterCheckerAPI.h"
+      :file "InterCheckerAPI.h"
+      :fsize 874
+      :lastmodtime '(22322 35031 377679 538000)))
+  :file "!home!awells!llvm!tools!clang!lib!StaticAnalyzer!Checkers!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

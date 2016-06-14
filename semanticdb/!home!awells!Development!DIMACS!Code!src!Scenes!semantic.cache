@@ -1,0 +1,40 @@
+;; Object Scenes/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Scenes/"
+  :tables
+  (list
+    (semanticdb-table "CreateSceneA.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Scenes/CreateScene.hpp" include nil nil [1 34])
+            ("Utils/Algebra2D.hpp" include nil nil [35 65])
+            ("Utils/PseudoRandom.hpp" include nil nil [66 99])
+            ("Utils/Curve.hpp" include nil nil [100 126])
+            ("Utils/Geometry.hpp" include nil nil [127 156])
+            ("cstdio" include (:system-flag t) nil [157 174])
+            ("cstdlib" include (:system-flag t) nil [175 193])
+            ("Abetare" using (:type ("Abetare" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [195 219])
+            ("CreateSceneA" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [250 259])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [260 272]))                  
+                :type "void")
+                nil [232 5628]))          
+      :file "CreateSceneA.cpp"
+      :pointmax 5629
+      :fsize 5601
+      :lastmodtime '(22325 63750 133328 748000)
+      :unmatched-syntax nil)
+    (semanticdb-table "CreateScene.hpp"
+      :file "CreateScene.hpp"
+      :fsize 658
+      :lastmodtime '(21852 60562 0 0)))
+  :file "!home!awells!Development!DIMACS!Code!src!Scenes!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

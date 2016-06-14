@@ -1,0 +1,2924 @@
+;; Object MP/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "MP/"
+  :tables
+  (list
+    (semanticdb-table "MPMyPlanner.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("MP/MPMyPlanner.hpp" include nil nil [1 30])
+            ("Utils/Colormap.hpp" include nil nil [31 60])
+            ("MPTriAbstraction.hpp" include nil nil [61 92])
+            ("Utils/GDraw.hpp" include nil nil [93 119])
+            ("Utils/HomotopyUtils.hpp" include nil nil [120 154])
+            ("iostream" include (:system-flag t) nil [155 174])
+            ("Utils/Geometry.hpp" include nil nil [175 204])
+            ("unordered_map" include (:system-flag t) nil [205 229])
+            ("MP/MPAbstraction.hpp" include nil nil [230 261])
+            ("Utils/Timer.hpp" include nil nil [262 288])
+            ("PROB_PATH" variable (:constant-flag t) nil [298 307])
+            ("Abetare" type
+               (:members 
+                  ( ("MPMyPlanner" function
+                       (:constructor-flag t
+                        :parent "MPMyPlanner"
+                        :arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [361 366]))                          
+                        :type ("MPMyPlanner" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [336 737])
+                    ("MPMyPlanner" function
+                       (:destructor-flag t
+                        :parent "MPMyPlanner"
+                        :arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [767 772]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [741 886])
+                    ("Run" function
+                       (:parent "MPMyPlanner"
+                        :arguments 
+                          ( ("nrIters" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [912 930]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [890 7456])
+                    ("SplitARData" function
+                       (:parent "MPMyPlanner"
+                        :arguments 
+                          ( ("key" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [7490 7504])
+                            ("data" variable
+                               (:pointer 1
+                                :type ("ARData" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7505 7525]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [7460 9287])
+                    ("CompleteARData" function
+                       (:parent "MPMyPlanner"
+                        :arguments 
+                          ( ("key" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [9324 9338])
+                            ("data" variable
+                               (:pointer 1
+                                :type ("ARData" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9339 9359]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [9291 10169])
+                    ("AddVertexToARData" function
+                       (:parent "MPMyPlanner"
+                        :arguments 
+                          ( ("vid" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [10209 10223]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [10173 11138])
+                    ("AddVertex" function
+                       (:parent "MPMyPlanner"
+                        :arguments 
+                          ( ("v" variable
+                               (:pointer 1
+                                :type ("Vertex" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [11169 11186]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [11142 11323])
+                    ("SelectARData" function
+                       (:pointer 1
+                        :parent "MPMyPlanner"
+                        :arguments 
+                          ( ("key" variable
+                               (:pointer 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [11377 11393]))                          
+                        :type ("MPMyPlanner::ARData" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [11330 12289])
+                    ("SelectARData" function
+                       (:pointer 1
+                        :parent "MPMyPlanner"
+                        :arguments 
+                          ( ("key" variable
+                               (:pointer 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [12343 12359])
+                            ("homotopy" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [12360 12379]))                          
+                        :type ("MPMyPlanner::ARData" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [12296 13487])
+                    ("SelectTarget" function
+                       (:parent "MPMyPlanner"
+                        :arguments 
+                          ( ("rid" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [13525 13539])
+                            ("as" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [13540 13553]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [13494 14203])
+                    ("SelectTarget" function
+                       (:parent "MPMyPlanner"
+                        :arguments 
+                          ( ("rid" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [14241 14255])
+                            ("as" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [14256 14269])
+                            ("homotopy" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [14270 14289]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [14210 14920])
+                    ("SelectVertexFromARData" function
+                       (:parent "MPMyPlanner"
+                        :arguments 
+                          ( ("data" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("ARData" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [14964 14990]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [14924 15884])
+                    ("Draw" function
+                       (:parent "MPMyPlanner"
+                        :arguments 
+                          ( ("flags" variable
+                               (:constant-flag t
+                                :type ("Flags" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [15911 15929]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [15888 16524])
+                    ("UpdatePath" function
+                       (:parent "MPMyPlanner"
+                        :arguments 
+                          ( ("pState" variable (:type ("MPTreePlanner::PathState" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16557 16589])
+                            ("rid" variable (:type "int") (reparse-symbol arg-sub-list) [16590 16598]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [16528 17197])
+                    ("IncreaseWeights" function
+                       (:parent "MPMyPlanner"
+                        :arguments 
+                          ( ("rid" variable (:type "int") (reparse-symbol arg-sub-list) [17235 17243]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [17201 18033])
+                    ("FixRegionWeights" function
+                       (:parent "MPMyPlanner"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [18037 19075])
+                    ("GivePathWeights" function
+                       (:parent "MPMyPlanner"
+                        :arguments 
+                          ( ("homotopy" variable (:type "int") (reparse-symbol arg-sub-list) [19113 19126]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [19079 21386])
+                    ("ResetRegionWeights" function
+                       (:parent "MPMyPlanner"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [21390 21665])
+                    ("ChooseHomotopy" function
+                       (:parent "MPMyPlanner"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [21669 24361])
+                    ("DrawSWeights" function
+                       (:parent "MPMyPlanner"
+                        :arguments 
+                          ( ("flags" variable
+                               (:constant-flag t
+                                :type ("Flags" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [24776 24794]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [24745 26785]))                  
+                :type "namespace")
+                nil [313 26787]))          
+      :file "MPMyPlanner.cpp"
+      :pointmax 26788
+      :fsize 26785
+      :lastmodtime '(22350 55144 455171 569000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("PROB_PATH" . ((number "0.9" 308 . 311)))
+          )
+)
+    (semanticdb-table "MPMyPlanner.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ABETARE__MP_MyPlanner_HPP_" variable (:constant-flag t) nil [44 70])
+            ("MP/MPTreePlanner.hpp" include nil nil [72 103])
+            ("Utils/Map.hpp" include nil nil [104 128])
+            ("Utils/HomotopyUtils.hpp" include nil nil [129 163])
+            ("Abetare" type
+               (:members 
+                  ( ("MPMyPlanner" type
+                       (:superclasses 
+                          ( ("MPTreePlanner" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [229 236])
+                            ("MPMyPlanner" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [251 256]))                                  
+                                :type ("MPMyPlanner" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [239 257])
+                            ("MPMyPlanner" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [282 287]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [261 288])
+                            ("Run" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("nrIters" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [309 327]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [292 328])
+                            ("Draw" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("flags" variable
+                                       (:constant-flag t
+                                        :type ("Flags" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [350 368]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [332 369])
+                            ("m_probSplit" variable (:type "double") (reparse-symbol classsubparts) [373 392])
+                            ("m_discountSelect" variable (:type "double") (reparse-symbol classsubparts) [395 419])
+                            ("m_hexp" variable (:type "double") (reparse-symbol classsubparts) [422 436])
+                            ("m_wexp" variable (:type "double") (reparse-symbol classsubparts) [439 453])
+                            ("m_initialPenaltyForPath" variable (:type "double") (reparse-symbol classsubparts) [456 487])
+                            ("m_increasingPenaltyForPath" variable (:type "double") (reparse-symbol classsubparts) [490 524])
+                            ("m_homotopySelType" variable (:type "int") (reparse-symbol classsubparts) [527 549])
+                            ("m_homotopyCorrectChoice" variable (:type "int") (reparse-symbol classsubparts) [552 580])
+                            ("m_cutoff" variable (:type "double") (reparse-symbol classsubparts) [583 599])
+                            ("m_numAttempts" variable (:type "int") (reparse-symbol classsubparts) [602 620])
+                            ("CONST_ALPHA" variable (:type "double") (reparse-symbol classsubparts) [623 654])
+                            ("CONST_BETA" variable (:type "double") (reparse-symbol classsubparts) [623 654])
+                            ("CONST_UPDATE" variable (:type "int") (reparse-symbol classsubparts) [657 674])
+                            ("m_augmentedGraph" variable (:type ("HomotopyUtils::augGraph" type (:type "class") nil nil)) (reparse-symbol classsubparts) [678 719])
+                            ("shortestPaths" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("std::vector" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [722 766])
+                            ("triHomotopyPaths" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("std::vector" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [769 829])
+                            ("triHomotopyCosts" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("std::vector" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [863 913])
+                            ("triHomotopyNormalizedCosts" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("std::vector" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [952 1012])
+                            ("homotopyExpansionAttempts" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1051 1094])
+                            ("homotopyBestTri" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1097 1130])
+                            ("homotopyScores" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1133 1165])
+                            ("currentSpotOnPath" variable (:type "int") (reparse-symbol classsubparts) [1168 1190])
+                            ("currHomotopy" variable (:type "int") (reparse-symbol classsubparts) [1193 1210])
+                            ("originalRegionNeighWeights" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("std::vector" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1213 1273])
+                            ("repPoints" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("std::complex" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1279 1323])
+                            ("numPathsToFind" variable (:type "int") (reparse-symbol classsubparts) [1326 1345])
+                            ("USE_COOLNESS" variable
+                               (:default-value "false"
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1348 1374])
+                            ("USE_ROBUST_COOLNESS" variable
+                               (:default-value "false"
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1377 1410])
+                            ("protected" label nil (reparse-symbol classsubparts) [1412 1422])
+                            ("ARData" type
+                               (:members 
+                                  ( ("ARData" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1456 1461]))                                          
+                                        :type ("ARData" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [1449 1583])
+                                    ("ARData" function
+                                       (:destructor-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1605 1610]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1589 1622])
+                                    ("m_vids" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("int" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1628 1652])
+                                    ("m_gCostSum" variable (:type "double") (reparse-symbol classsubparts) [1657 1675])
+                                    ("m_gCostTotalWeight" variable (:type "double") (reparse-symbol classsubparts) [1680 1706])
+                                    ("m_weight" variable (:type "double") (reparse-symbol classsubparts) [1711 1727])
+                                    ("m_originalWeight" variable (:type "double") (reparse-symbol classsubparts) [1732 1756])
+                                    ("m_level" variable (:type "int") (reparse-symbol classsubparts) [1761 1773]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [1426 1778])
+                            ("AddVertex" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("v" variable
+                                       (:pointer 1
+                                        :type ("Vertex" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1804 1821]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1782 1822])
+                            ("SelectARData" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("key" variable
+                                       (:pointer 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1854 1870]))                                  
+                                :type ("ARData" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1825 1871])
+                            ("SelectARData" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("key" variable
+                                       (:pointer 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1903 1919])
+                                    ("homotopy" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1920 1939]))                                  
+                                :type ("ARData" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1874 1940])
+                            ("SelectVertexFromARData" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("data" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("ARData" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1978 2004]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1943 2005])
+                            ("CompleteARData" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("key" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2036 2050])
+                                    ("data" variable
+                                       (:pointer 1
+                                        :type ("ARData" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2051 2071]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2008 2072])
+                            ("SplitARData" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("key" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2100 2114])
+                                    ("data" variable
+                                       (:pointer 1
+                                        :type ("ARData" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2115 2135]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2075 2136])
+                            ("AddVertexToARData" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("vid" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2170 2184]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2139 2185])
+                            ("SelectTarget" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("rid" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2214 2228])
+                                    ("as" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2229 2242]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2188 2243])
+                            ("SelectTarget" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("rid" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2272 2286])
+                                    ("as" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2287 2300])
+                                    ("homotopy" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2301 2320]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2246 2321])
+                            ("UpdatePath" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("numSteps" variable
+                                       (:constant-flag t
+                                        :type ("MPTreePlanner::PathState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2348 2388])
+                                    ("rid" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2389 2403]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2324 2404])
+                            ("IncreaseWeights" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("rid" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [2436 2450]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2407 2451])
+                            ("FixRegionWeights" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2484 2489]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2454 2490])
+                            ("GivePathWeights" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [2522 2528]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2493 2529])
+                            ("ResetRegionWeights" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2564 2569]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2532 2570])
+                            ("ChooseHomotopy" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2600 2605]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2573 2606])
+                            ("DrawSWeights" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("flags" variable (:type ("Flags" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2635 2647]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2609 2648])
+                            ("public" label nil (reparse-symbol classsubparts) [2650 2657])
+                            ("m_map" variable (:type "int") (reparse-symbol classsubparts) [2681 2687])
+                            ("m_split" variable (:type "int") (reparse-symbol classsubparts) [2711 2719])
+                            ("m_wmin" variable (:type "double") (reparse-symbol classsubparts) [2722 2736])
+                            ("m_wmax" variable (:type "double") (reparse-symbol classsubparts) [2739 2753])
+                            ("m_iter" variable (:type "int") (reparse-symbol classsubparts) [2756 2767]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [186 2772]))                  
+                :type "namespace")
+                nil [165 2774]))          
+      :file "MPMyPlanner.hpp"
+      :pointmax 2784
+      :fsize 2783
+      :lastmodtime '(22332 53179 467814 228000)
+      :unmatched-syntax '((semantic-list 2696 . 2710) (symbol 2690 . 2696) (semantic-list 2666 . 2680) (symbol 2660 . 2666))
+      :lexical-table 
+        '(("ABETARE__MP_MyPlanner_HPP_")
+          )
+)
+    (semanticdb-table "MPTriAbstraction.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ABETARE__MP_TRI_ABSTRACTION_HPP_" variable (:constant-flag t) nil [50 82])
+            ("MP/MPAbstraction.hpp" include nil nil [84 115])
+            ("Utils/Algebra2D.hpp" include nil nil [116 146])
+            ("Utils/Polygon2D.hpp" include nil nil [147 177])
+            ("Utils/Misc.hpp" include nil nil [178 203])
+            ("Utils/Grid.hpp" include nil nil [204 229])
+            ("Abetare" type
+               (:members 
+                  ( ("MPTriAbstraction" type
+                       (:superclasses 
+                          ( ("MPAbstraction" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [311 318])
+                            ("TriRegion" type
+                               (:superclasses 
+                                  ( ("Region" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("TriRegion" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [372 377]))                                          
+                                        :type ("TriRegion" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [362 424])
+                                    ("TriRegion" function
+                                       (:destructor-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [455 460]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [436 474])
+                                    ("m_shape" variable (:type ("Polygon2D" type (:type "class") nil nil)) (reparse-symbol classsubparts) [481 506])
+                                    ("m_cellsInside" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("int" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [512 543])
+                                    ("m_cellsIntersect" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("int" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [549 583])
+                                    ("m_stitched" variable (:type "bool") (reparse-symbol classsubparts) [589 617]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [321 621])
+                            ("MPTriAbstraction" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [646 651]))                                  
+                                :type ("MPTriAbstraction" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [629 819])
+                            ("MPTriAbstraction" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [849 854]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [823 922])
+                            ("CompleteSetup" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [956 961]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [929 962])
+                            ("LocateRegion" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("p" variable
+                                       (:dereference 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [990 1007]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [964 1008])
+                            ("IsInsideRegion" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("rid" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1038 1052])
+                                    ("p" variable
+                                       (:dereference 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [1053 1070]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1010 1156])
+                            ("SamplePointInsideRegion" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("rid" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1197 1211])
+                                    ("p" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [1212 1223])
+                                    ("dtol" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [1224 1242]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1160 1249])
+                            ("SplitRegion" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("rid" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1276 1290])
+                                    ("new_rids" variable
+                                       (:pointer 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("int" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [1291 1318]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1251 1319])
+                            ("DrawRegion" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("flag" variable
+                                       (:constant-flag t
+                                        :type ("Flags" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1345 1362])
+                                    ("rid" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1363 1377]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1321 1378])
+                            ("m_areaConstraint" variable (:type "double") (reparse-symbol classsubparts) [1382 1406])
+                            ("m_angleConstraint" variable (:type "double") (reparse-symbol classsubparts) [1408 1433])
+                            ("m_useConformingDelaunay" variable (:type "bool") (reparse-symbol classsubparts) [1435 1466])
+                            ("m_minAreaToAdd" variable (:type "double") (reparse-symbol classsubparts) [1468 1490])
+                            ("m_minAreaToSplit" variable (:type "double") (reparse-symbol classsubparts) [1492 1516])
+                            ("m_covGrid" variable (:type ("Grid" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1518 1535])
+                            ("protected" label nil (reparse-symbol classsubparts) [1542 1552])
+                            ("InsideIntersectRegions" type
+                               (:members 
+                                  ( ("m_insideRegion" variable (:type "int") (reparse-symbol classsubparts) [1592 1624])
+                                    ("m_intersectRegions" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("int" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1630 1666]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [1554 1670])
+                            ("m_cellsToRegions" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("InsideIntersectRegions" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1674 1730])
+                            ("Triangulate" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1758 1763]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1733 1764])
+                            ("LocatorRemoveCells" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("rid" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1798 1812]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1766 1813])
+                            ("LocatorUpdateCells" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("rid" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1847 1861]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1815 1862])
+                            ("LocatorCompleteSetup" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1898 1903]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1864 1904]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [255 1913]))                  
+                :type "namespace")
+                nil [231 1919]))          
+      :file "MPTriAbstraction.hpp"
+      :pointmax 1930
+      :fsize 1929
+      :lastmodtime '(21852 60562 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("ABETARE__MP_TRI_ABSTRACTION_HPP_")
+          )
+)
+    (semanticdb-table "MPAbstraction.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ABETARE__MP_ABSTRACTION_HPP_" variable (:constant-flag t) nil [46 74])
+            ("Utils/GraphSearch.hpp" include nil nil [76 108])
+            ("Utils/Algebra2D.hpp" include nil nil [109 139])
+            ("Utils/Algebra3D.hpp" include nil nil [140 170])
+            ("Utils/Algebra.hpp" include nil nil [171 199])
+            ("Utils/Misc.hpp" include nil nil [200 225])
+            ("Utils/Flags.hpp" include nil nil [226 252])
+            ("Utils/TriMesh.hpp" include nil nil [253 281])
+            ("vector" include (:system-flag t) nil [282 299])
+            ("complex" include (:system-flag t) nil [300 318])
+            ("cstdio" include (:system-flag t) nil [319 336])
+            ("Abetare" type
+               (:members 
+                  ( ("MPSimulator" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [358 376])
+                    ("MPAbstraction" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [400 407])
+                            ("shortestPath" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [414 444])
+                            ("secondShortestPath" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [449 485])
+                            ("triHomotopyCostsTmp" variable
+                               (:pointer 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::vector" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [489 543])
+                            ("selectedPathPtr" variable
+                               (:pointer 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [547 581])
+                            ("selectedHomotopyPtr" variable
+                               (:pointer 1
+                                :type "int")
+                                (reparse-symbol classsubparts) [584 609])
+                            ("MPAbstraction" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [628 633]))                                  
+                                :type ("MPAbstraction" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [614 634])
+                            ("lastSelRID" variable (:type "int") (reparse-symbol classsubparts) [638 653])
+                            ("MPAbstraction" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [680 685]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [657 731])
+                            ("PrintGraph" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("out" variable
+                                       (:pointer 1
+                                        :type ("FILE" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [759 769]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [735 776])
+                            ("CompleteSetup" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [807 812]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [780 820])
+                            ("HCosts" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [844 849]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [824 850])
+                            ("LocateRegion" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("p" variable
+                                       (:dereference 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [880 897]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [855 902])
+                            ("IsInsideRegion" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("rid" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [934 948])
+                                    ("p" variable
+                                       (:dereference 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [949 966]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [906 1009])
+                            ("SamplePointInsideRegion" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("rid" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1050 1064])
+                                    ("p" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [1065 1076])
+                                    ("dtol" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [1077 1095]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1013 1106])
+                            ("SplitRegion" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("rid" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1134 1148])
+                                    ("new_rids" variable
+                                       (:pointer 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("int" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [1149 1176]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1109 1181])
+                            ("Draw" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("flags" variable
+                                       (:constant-flag t
+                                        :type ("Flags" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1203 1221]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1185 1222])
+                            ("DrawRegion" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("flags" variable
+                                       (:constant-flag t
+                                        :type ("Flags" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1249 1267])
+                                    ("rid" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1268 1282]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1225 1287])
+                            ("DrawRegions" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("flags" variable
+                                       (:constant-flag t
+                                        :type ("Flags" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1315 1333]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1290 1334])
+                            ("DrawEdges" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("flags" variable
+                                       (:constant-flag t
+                                        :type ("Flags" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1360 1378]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1337 1379])
+                            ("DrawWeights" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("flags" variable
+                                       (:constant-flag t
+                                        :type ("Flags" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1407 1425]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1382 1426])
+                            ("DrawQuest" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("flags" variable
+                                       (:constant-flag t
+                                        :type ("Flags" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1452 1470]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1429 1471])
+                            ("DrawPath" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("flags" variable
+                                       (:constant-flag t
+                                        :type ("Flags" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1496 1514])
+                                    ("rids" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("int" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [1515 1551]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1474 1552])
+                            ("DrawNeighs" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("flags" variable
+                                       (:constant-flag t
+                                        :type ("Flags" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1579 1597])
+                                    ("rid" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1598 1612]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1555 1613])
+                            ("DrawZ" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("rid" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1637 1651]))                                  
+                                :type "double")
+                                (reparse-symbol classsubparts) [1616 1652])
+                            ("EstimateFreeVolume" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("nrSamples" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1689 1709]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1657 1710])
+                            ("UpdateMinDistAmongProps" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1752 1757]))                                  
+                                :type "double")
+                                (reparse-symbol classsubparts) [1713 1758])
+                            ("DataProp" type
+                               (:members 
+                                  ( ("DataProp" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1796 1801]))                                          
+                                        :type ("DataProp" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [1787 1844])
+                                    ("DataProp" function
+                                       (:destructor-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1868 1873]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1850 1885])
+                                    ("m_distToGoal" variable (:type "double") (reparse-symbol classsubparts) [1891 1911])
+                                    ("m_pathToGoal" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("int" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1916 1946]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [1762 1951])
+                            ("Region" type
+                               (:members 
+                                  ( ("Region" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1985 1990]))                                          
+                                        :type ("Region" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [1978 2167])
+                                    ("Region" function
+                                       (:destructor-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2189 2194]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2173 2291])
+                                    ("m_cfg" variable
+                                       (:pointer 1
+                                        :type "double")
+                                        (reparse-symbol classsubparts) [2297 2311])
+                                    ("m_neighs" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("int" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [2316 2342])
+                                    ("m_weights" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("double" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [2347 2377])
+                                    ("m_label" variable (:type "int") (reparse-symbol classsubparts) [2382 2394])
+                                    ("m_vol" variable (:type "double") (reparse-symbol classsubparts) [2399 2412])
+                                    ("m_fvol" variable (:type "double") (reparse-symbol classsubparts) [2417 2431])
+                                    ("m_dataProps" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("DataProp" type (:pointer 1) nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [2436 2471])
+                                    ("m_valid" variable (:type "bool") (reparse-symbol classsubparts) [2476 2489])
+                                    ("m_drawz" variable (:type "double") (reparse-symbol classsubparts) [2494 2509])
+                                    ("m_dclear" variable (:type "double") (reparse-symbol classsubparts) [2514 2530])
+                                    ("m_diredgeHVals" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("std::complex" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [2564 2613]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [1955 2618])
+                            ("m_sim" variable
+                               (:pointer 1
+                                :type ("MPSimulator" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2622 2641])
+                            ("m_regions" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("Region" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2644 2675])
+                            ("m_ridStart" variable (:type "int") (reparse-symbol classsubparts) [2678 2693])
+                            ("m_ridsProps" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2696 2725])
+                            ("m_usedClear" variable (:type "bool") (reparse-symbol classsubparts) [2728 2745])
+                            ("m_minDistToProps" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("double" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2748 2785])
+                            ("m_maxDistToProps" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("double" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2788 2825])
+                            ("RegionGraphSearchInfo" type
+                               (:superclasses 
+                                  ( ("GraphSearchInfo" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [2893 2900])
+                                    ("RegionGraphSearchInfo" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2928 2933]))                                          
+                                        :type ("RegionGraphSearchInfo" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2906 3070])
+                                    ("GetOutEdges" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("u" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [3093 3105])
+                                            ("edges" variable
+                                               (:pointer 1
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("int" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [3118 3149])
+                                            ("costs" variable
+                                               (:pointer 1
+                                                :default-value "NULL"
+                                                :type ("std::vector" type
+                                                     (:template-specifier 
+                                                        ( ("double" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [3162 3202]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [3076 3210])
+                                    ("IsGoal" function
+                                       (:arguments 
+                                          ( ("key" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [3228 3242]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [3216 3291])
+                                    ("HeuristicCostToGoal" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("u" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [3324 3336]))                                          
+                                        :type "double")
+                                        (reparse-symbol classsubparts) [3297 3343])
+                                    ("m_abstraction" variable
+                                       (:pointer 1
+                                        :type ("MPAbstraction" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [3349 3378])
+                                    ("m_ridGoal" variable (:type "int") (reparse-symbol classsubparts) [3383 3397])
+                                    ("m_allowPathThroughProps" variable (:type "bool") (reparse-symbol classsubparts) [3402 3431]))                                  
+                                :type "class")
+                                (reparse-symbol classsubparts) [2829 3436])
+                            ("m_gsi" variable (:type ("RegionGraphSearchInfo" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3440 3468])
+                            ("m_gs" variable (:type ("GraphSearch" type
+                                 (:template-specifier 
+                                    ( ("int" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [3471 3493])
+                            ("Search" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("ridFrom" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [3517 3535])
+                                    ("ridTo" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [3536 3552]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [3497 3553])
+                            ("ComputeMinDistAmongProps" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("rids" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("int" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [3596 3632]))                                  
+                                :type "double")
+                                (reparse-symbol classsubparts) [3556 3639])
+                            ("protected" label nil (reparse-symbol classsubparts) [3642 3652])
+                            ("UpdateGoalPathsFromNeighbors" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("rid" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [3697 3711]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3655 3712])
+                            ("SplitRegionUpdateDataProps" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("rid" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [3755 3769])
+                                    ("new_rids" variable
+                                       (:pointer 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("int" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [3770 3797]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3715 3798])
+                            ("RegionDistance" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("r1" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("Region" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3831 3855])
+                                    ("r2" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("Region" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3856 3880]))                                  
+                                :type "double")
+                                (reparse-symbol classsubparts) [3801 3887])
+                            ("IsRegionDistanceMetric" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3927 3932]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [3891 3963])
+                            ("m_minDistAmongProps" variable (:type "double") (reparse-symbol classsubparts) [3967 3994]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [378 3998]))                  
+                :type "namespace")
+                nil [338 4000]))          
+      :file "MPAbstraction.hpp"
+      :pointmax 4009
+      :fsize 4008
+      :lastmodtime '(22285 27776 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("ABETARE__MP_ABSTRACTION_HPP_")
+          )
+)
+    (semanticdb-table "MPTreePlanner.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ABETARE__MP_TREE_PLANNER_HPP_" variable (:constant-flag t) nil [47 76])
+            ("MP/MPPlanner.hpp" include nil nil [78 105])
+            ("Abetare" type
+               (:members 
+                  ( ("MPTreePlanner" type
+                       (:superclasses 
+                          ( ("MPPlanner" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [180 187])
+                            ("PathState" type
+                               (:members 
+                                  ( ("PathState_reached" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [212 230])
+                                    ("PathState_collided" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [231 250])
+                                    ("PathState_end" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [251 266]))                                  
+                                :type "enum")
+                                (reparse-symbol classsubparts) [196 267])
+                            ("MPTreePlanner" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [290 295]))                                  
+                                :type ("MPTreePlanner" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [276 296])
+                            ("MPTreePlanner" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [323 328]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [300 329])
+                            ("GetSolved" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [354 359]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [332 396])
+                            ("GetReversePath" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("vid" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [427 441])
+                                    ("rpath" variable
+                                       (:pointer 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("int" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [442 473]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [399 480])
+                            ("PathCost" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("path" variable
+                                       (:pointer 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("int" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [507 537]))                                  
+                                :type "double")
+                                (reparse-symbol classsubparts) [483 544])
+                            ("GetNrStates" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [571 576]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [547 619])
+                            ("GetState" function
+                               (:pointer 1
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("i" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [649 661]))                                  
+                                :type ("MPState" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [623 699])
+                            ("Draw" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("flags" variable
+                                       (:constant-flag t
+                                        :type ("Flags" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [721 739]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [703 740])
+                            ("m_dtolSteer" variable (:type "double") (reparse-symbol classsubparts) [743 763])
+                            ("m_dtolSample" variable (:type "double") (reparse-symbol classsubparts) [765 786])
+                            ("m_maxNrSteps" variable (:type "int") (reparse-symbol classsubparts) [788 809])
+                            ("m_minNrSteps" variable (:type "int") (reparse-symbol classsubparts) [811 832])
+                            ("m_probSteer" variable (:type "double") (reparse-symbol classsubparts) [834 854])
+                            ("m_goalBias" variable (:type "double") (reparse-symbol classsubparts) [856 875])
+                            ("Vertex" type
+                               (:members 
+                                  ( ("Vertex" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [924 929]))                                          
+                                        :type ("Vertex" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [917 1165])
+                                    ("Vertex" function
+                                       (:destructor-flag t
+                                        :typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1193 1198]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1177 1277])
+                                    ("m_s" variable
+                                       (:pointer 1
+                                        :type ("MPState" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1294 1308])
+                                    ("m_cfg" variable
+                                       (:pointer 1
+                                        :type "double")
+                                        (reparse-symbol classsubparts) [1314 1330])
+                                    ("m_parent" variable (:type "int") (reparse-symbol classsubparts) [1336 1355])
+                                    ("m_astate" variable (:type "int") (reparse-symbol classsubparts) [1361 1380])
+                                    ("m_gCost" variable (:type "double") (reparse-symbol classsubparts) [1386 1404])
+                                    ("m_rid" variable (:type "int") (reparse-symbol classsubparts) [1410 1426])
+                                    ("m_prop" variable (:type "int") (reparse-symbol classsubparts) [1432 1449])
+                                    ("m_nsel" variable (:type "int") (reparse-symbol classsubparts) [1455 1472])
+                                    ("m_propsReached" variable (:type ("std::vector" type
+                                         (:template-specifier 
+                                            ( ("int" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1478 1510]))                                  
+                                :type "struct")
+                                (reparse-symbol classsubparts) [895 1514])
+                            ("GetNrVertices" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1543 1548]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1517 1591])
+                            ("NewVertex" function
+                               (:pointer 1
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1621 1626]))                                  
+                                :type ("Vertex" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1595 1664])
+                            ("Initialize" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1694 1699]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1670 1700])
+                            ("ExtendFrom" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("vid" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1732 1749])
+                                    ("target" variable
+                                       (:dereference 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [1761 1783]))                                  
+                                :type ("PathState" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1703 1784])
+                            ("AddVertex" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("v" variable
+                                       (:pointer 1
+                                        :type ("Vertex" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1809 1826]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1787 1827])
+                            ("m_vertices" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("Vertex" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1830 1862])
+                            ("m_vidSolved" variable (:type "int") (reparse-symbol classsubparts) [1864 1897])
+                            ("m_cfgTarget" variable
+                               (:pointer 1
+                                :type "double")
+                                (reparse-symbol classsubparts) [1899 1932])
+                            ("m_useDFA" variable (:type "bool") (reparse-symbol classsubparts) [1934 1964]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [131 1971]))                  
+                :type "namespace")
+                nil [107 1978]))          
+      :file "MPTreePlanner.hpp"
+      :pointmax 1988
+      :fsize 1987
+      :lastmodtime '(21852 60562 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("ABETARE__MP_TREE_PLANNER_HPP_")
+          )
+)
+    (semanticdb-table "MPPlanner.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ABETARE__MP_PLANNER_HPP_" variable (:constant-flag t) nil [42 66])
+            ("MP/MPSimulator.hpp" include nil nil [68 97])
+            ("MP/MPAbstraction.hpp" include nil nil [98 129])
+            ("Utils/DFA.hpp" include nil nil [130 154])
+            ("Utils/Flags.hpp" include nil nil [155 181])
+            ("Utils/GDraw.hpp" include nil nil [182 208])
+            ("Abetare" type
+               (:members 
+                  ( ("PlannerStats" type
+                       (:members 
+                          ( ("" type
+                               (:members 
+                                  ( ("ABSTR_CONSTRUCT" variable
+                                       (:constant-flag t
+                                        :default-value (299 300)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [281 300])
+                                    ("ABSTR_LOCATE" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [304 317])
+                                    ("ABSTR_HCOSTS" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [320 333])
+                                    ("ABSTR_SPLIT" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [336 348])
+                                    ("SIMULATE" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [351 360])
+                                    ("COLLISION" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [363 373])
+                                    ("TREE_EXTEND" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [376 388])
+                                    ("ADD_VERTEX" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [391 402])
+                                    ("SELECT_VERTEX" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [405 419])
+                                    ("SELECT_DATA" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [422 434])
+                                    ("COMPLETE_DATA" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [437 451])
+                                    ("SPLIT_DATA" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [454 465])
+                                    ("SPLIT_COMPLETE_DATA" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [468 488])
+                                    ("POPULATE_CACHE" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [491 506])
+                                    ("ASTAR_NR" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [509 518])
+                                    ("FIND_SHORTEST_PATHS" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [521 541])
+                                    ("GIVE_PATH_WEIGHTS" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [544 562])
+                                    ("NR_TIMES" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [565 580]))                                  
+                                :type "enum")
+                                (reparse-symbol classsubparts) [266 581])
+                            ("PlannerStats" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [604 609]))                                  
+                                :type ("PlannerStats" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [591 681])
+                            ("Print" function
+                               (:arguments 
+                                  ( ("out" variable
+                                       (:pointer 1
+                                        :type ("FILE" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [696 707]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [685 821])
+                            ("m_times" variable
+                               (:dereference 1
+                                :type "double")
+                                (reparse-symbol classsubparts) [826 851]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [239 860])
+                    ("MPPlanner" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [898 905])
+                            ("MPPlanner" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [917 922]))                                  
+                                :type ("MPPlanner" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [907 965])
+                            ("MPPlanner" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [988 993]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [969 1071])
+                            ("Run" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("nrIters" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1098 1116]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1077 1121])
+                            ("GetSolved" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1151 1156]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1124 1167])
+                            ("GetReversePath" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("vid" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1201 1215])
+                                    ("rpath" variable
+                                       (:pointer 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("int" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [1216 1247]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1169 1258])
+                            ("PathCost" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("path" variable
+                                       (:pointer 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("int" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [1286 1316]))                                  
+                                :type "double")
+                                (reparse-symbol classsubparts) [1260 1327])
+                            ("GetNrStates" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1358 1363]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1329 1374])
+                            ("GetState" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("i" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1402 1414]))                                  
+                                :type ("MPState" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1376 1419])
+                            ("Draw" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("flags" variable
+                                       (:constant-flag t
+                                        :type ("Flags" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1443 1461]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1421 1466])
+                            ("m_sim" variable
+                               (:pointer 1
+                                :type ("MPSimulator" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1470 1492])
+                            ("m_abstract" variable
+                               (:pointer 1
+                                :type ("MPAbstraction" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1494 1521])
+                            ("m_dfa" variable (:type ("DFA" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1523 1545])
+                            ("m_stats" variable (:type ("PlannerStats" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1547 1571])
+                            ("protected" label nil (reparse-symbol classsubparts) [1577 1587])
+                            ("EncodeKey" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("rid" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1614 1628])
+                                    ("as" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1629 1642]))                                  
+                                :type ("MyKey" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1589 1708])
+                            ("DecodeKey" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("key" variable
+                                       (:constant-flag t
+                                        :type ("MyKey" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1735 1751])
+                                    ("rid" variable
+                                       (:pointer 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1752 1768])
+                                    ("as" variable
+                                       (:pointer 1
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1769 1784]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1712 1878]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [872 1887]))                  
+                :type "namespace")
+                nil [210 1894]))          
+      :file "MPPlanner.hpp"
+      :pointmax 1904
+      :fsize 1903
+      :lastmodtime '(22161 21314 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("ABETARE__MP_PLANNER_HPP_")
+          )
+)
+    (semanticdb-table "MPSimulator.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ABETARE__MP_SIMULATOR_HPP_" variable (:constant-flag t) nil [44 70])
+            ("MP/MPDefaults.hpp" include nil nil [72 100])
+            ("Utils/Grid.hpp" include nil nil [101 126])
+            ("Utils/Misc.hpp" include nil nil [127 152])
+            ("Utils/TriMesh.hpp" include nil nil [153 181])
+            ("Utils/Algebra.hpp" include nil nil [182 210])
+            ("Utils/Algebra3D.hpp" include nil nil [211 241])
+            ("Utils/Polygon2D.hpp" include nil nil [242 272])
+            ("Utils/Flags.hpp" include nil nil [273 299])
+            ("MP/MPGoal.hpp" include nil nil [300 324])
+            ("External/PQP/PQPTriMesh.hpp" include nil nil [325 363])
+            ("Abetare" type
+               (:members 
+                  ( ("MPState" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [413 420])
+                            ("MPState" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [430 435]))                                  
+                                :type ("MPState" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [422 441])
+                            ("MPState" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [462 467]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [445 473]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [389 480])
+                    ("MPSimulator" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [514 521])
+                            ("MPSimulator" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [535 540]))                                  
+                                :type ("MPSimulator" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [523 541])
+                            ("MPSimulator" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [567 572]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [546 573])
+                            ("CompleteSetup" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [603 608]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [576 614])
+                            ("GetZ" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("s" variable
+                                       (:pointer 1
+                                        :type ("MPState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [637 655]))                                  
+                                :type "double")
+                                (reparse-symbol classsubparts) [617 676])
+                            ("GetDimPos" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [702 707]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [680 718])
+                            ("GetDimCfg" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [744 749]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [721 760])
+                            ("GetCfg" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("cfg" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [782 795]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [762 800])
+                            ("IsValidCfg" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("cfg" variable
+                                       (:dereference 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [826 845]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [802 850])
+                            ("SampleCfg" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("cfg" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [875 888]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [852 893])
+                            ("InterpCfg" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("cfg1" variable
+                                       (:dereference 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [918 938])
+                                    ("cfg2" variable
+                                       (:dereference 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [939 959])
+                                    ("t" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [960 975])
+                                    ("cfg" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [976 989]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [895 990])
+                            ("DistanceCfg" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("cfg1" variable
+                                       (:dereference 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [1019 1039])
+                                    ("cfg2" variable
+                                       (:dereference 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [1040 1060]))                                  
+                                :type "double")
+                                (reparse-symbol classsubparts) [992 1129])
+                            ("DistanceToObstaclesCfg" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("cfg" variable
+                                       (:dereference 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [1169 1188]))                                  
+                                :type "double")
+                                (reparse-symbol classsubparts) [1131 1193])
+                            ("NewCfg" function
+                               (:pointer 1
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1220 1225]))                                  
+                                :type "double")
+                                (reparse-symbol classsubparts) [1197 1274])
+                            ("DeleteCfg" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("cfg" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [1299 1312]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1276 1353])
+                            ("CopyCfg" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("dest" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [1376 1390])
+                                    ("src" variable
+                                       (:dereference 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [1391 1410]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1355 1470])
+                            ("DrawCfg" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("cfg" variable
+                                       (:dereference 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [1493 1512]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1472 1517])
+                            ("GetDimControl" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1552 1557]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1524 1568])
+                            ("NewControl" function
+                               (:pointer 1
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1597 1602]))                                  
+                                :type "double")
+                                (reparse-symbol classsubparts) [1570 1655])
+                            ("DeleteControl" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("u" variable
+                                       (:pointer 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [1684 1701]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1657 1738])
+                            ("CopyControl" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("dest" variable
+                                       (:pointer 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [1765 1785])
+                                    ("src" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [1786 1811]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1740 1875])
+                            ("CopyControl" function
+                               (:pointer 1
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("src" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [1905 1930]))                                  
+                                :type "double")
+                                (reparse-symbol classsubparts) [1877 2023])
+                            ("GetControl" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("u" variable
+                                       (:pointer 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2049 2066]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2025 2071])
+                            ("SetControl" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("u" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2097 2120]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2073 2125])
+                            ("SampleControl" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2154 2159]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2127 2164])
+                            ("AdjustControl" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2193 2198]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2166 2204])
+                            ("NewState" function
+                               (:pointer 1
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2234 2239]))                                  
+                                :type ("MPState" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2208 2278])
+                            ("DeleteState" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("s" variable
+                                       (:pointer 1
+                                        :type ("MPState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2305 2323]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2280 2358])
+                            ("CopyState" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("dest" variable
+                                       (:pointer 1
+                                        :type ("MPState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2383 2404])
+                                    ("src" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("MPState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2405 2431]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2360 2442])
+                            ("CopyState" function
+                               (:pointer 1
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("src" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("MPState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2471 2497]))                                  
+                                :type ("MPState" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2444 2587])
+                            ("GetVelocity" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2616 2621]))                                  
+                                :type "double")
+                                (reparse-symbol classsubparts) [2589 2642])
+                            ("GetAcceleration" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2677 2682]))                                  
+                                :type "double")
+                                (reparse-symbol classsubparts) [2646 2703])
+                            ("GetState" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("s" variable
+                                       (:pointer 1
+                                        :type ("MPState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2729 2747]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2707 2752])
+                            ("SetState" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("s" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("MPState" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2776 2800]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2754 2805])
+                            ("IsStateValid" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2833 2838]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [2807 2843])
+                            ("SimulateOneStep" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2875 2880]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2846 2885])
+                            ("StartSteerToPosition" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("target" variable
+                                       (:dereference 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2925 2947]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2891 2952])
+                            ("SteerToPosition" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("target" variable
+                                       (:dereference 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2983 3005]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2954 3010])
+                            ("HasReachedSteerPosition" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("target" variable
+                                       (:dereference 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [3049 3071])
+                                    ("dtol" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [3072 3090]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [3012 3095])
+                            ("CollidesWithObstacles" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("tmesh" variable
+                                       (:pointer 1
+                                        :type ("TriMesh" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3136 3158])
+                                    ("TR3" variable
+                                       (:dereference 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [3159 3178]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [3101 3179])
+                            ("CollidesWithProjObstacles" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("tmesh" variable
+                                       (:pointer 1
+                                        :type ("TriMesh" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3220 3242])
+                                    ("TR3" variable
+                                       (:dereference 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [3243 3262]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [3181 3263])
+                            ("GetPropLabel" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("p" variable
+                                       (:dereference 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [3291 3308]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [3266 3315])
+                            ("Draw" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("flags" variable
+                                       (:constant-flag t
+                                        :type ("Flags" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3336 3354]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3318 3355])
+                            ("DrawObstacles" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("flags" variable
+                                       (:constant-flag t
+                                        :type ("Flags" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3384 3402]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3357 3403])
+                            ("DrawGoals" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("flags" variable
+                                       (:constant-flag t
+                                        :type ("Flags" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3428 3446]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3405 3447])
+                            ("DrawGround" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("flags" variable
+                                       (:constant-flag t
+                                        :type ("Flags" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3473 3491]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3449 3492])
+                            ("TimeStepConstantVelocity" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("v" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [3535 3550])
+                                    ("d" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [3551 3566]))                                  
+                                :type "double")
+                                (reparse-symbol classsubparts) [3495 3573])
+                            ("TimeStepConstantAcceleration" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("v" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [3621 3636])
+                                    ("a" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [3648 3663])
+                                    ("d" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [3675 3690]))                                  
+                                :type "double")
+                                (reparse-symbol classsubparts) [3577 3697])
+                            ("RobotDistanceFromTriMesh" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("tmesh" variable
+                                       (:pointer 1
+                                        :type ("TriMesh" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3740 3762])
+                                    ("TR3" variable
+                                       (:dereference 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [3763 3782]))                                  
+                                :type "double")
+                                (reparse-symbol classsubparts) [3700 3804])
+                            ("m_dt" variable (:type "double") (reparse-symbol classsubparts) [3810 3841])
+                            ("m_grid" variable (:type ("Grid" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3843 3876])
+                            ("m_coeffProjVel" variable (:type "double") (reparse-symbol classsubparts) [3878 3919])
+                            ("m_cfgUseRot" variable (:type "bool") (reparse-symbol classsubparts) [3921 3959])
+                            ("m_cfgUseOther" variable (:type "bool") (reparse-symbol classsubparts) [3961 4001])
+                            ("m_obstaclesForCollision" variable
+                               (:pointer 1
+                                :type ("TriMesh" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4007 4057])
+                            ("m_obstaclesForDrawing" variable
+                               (:pointer 1
+                                :type ("TriMesh" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4059 4107])
+                            ("m_ground" variable
+                               (:pointer 1
+                                :type ("TriMesh" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4109 4144])
+                            ("m_projObstacles" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("Polygon2D" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4148 4190])
+                            ("m_goals" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("MPGoal" type (:pointer 1) nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4192 4226])
+                            ("m_projShape" variable
+                               (:pointer 1
+                                :type ("TriMesh" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4228 4266])
+                            ("m_tmeshProjObstacles" variable (:type ("PQPTriMesh" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4268 4315])
+                            ("m_cfgMin" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("double" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4318 4353])
+                            ("m_cfgMax" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("double" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [4355 4390]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [486 4398]))                  
+                :type "namespace")
+                nil [365 4404]))          
+      :file "MPSimulator.hpp"
+      :pointmax 4415
+      :fsize 4414
+      :lastmodtime '(21852 60562 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("ABETARE__MP_SIMULATOR_HPP_")
+          )
+)
+    (semanticdb-table "MPDefaults.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ABETARE__MP_DEFAULTS_HPP_" variable (:constant-flag t) nil [43 68])
+            ("Abetare" type
+               (:members 
+                  ( ("" type
+                       (:members 
+                          ( ("MP_FLAG_GRUN_PAUSE" variable
+                               (:constant-flag t
+                                :default-value (142 143)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [108 143])
+                            ("MP_FLAG_GRUN_ANIMATE" variable
+                               (:constant-flag t
+                                :default-value (189 190)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [155 190])
+                            ("MP_FLAG_GRUN_CAMERA_FOLLOW" variable
+                               (:constant-flag t
+                                :default-value (236 237)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [202 237])
+                            ("MP_FLAG_GRUN_STEER" variable
+                               (:constant-flag t
+                                :default-value (283 284)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [249 284])
+                            ("MP_FLAG_GRUN_NEIGHS" variable
+                               (:constant-flag t
+                                :default-value (330 331)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [296 331])
+                            ("MP_FLAG_GRUN_SPLIT" variable
+                               (:constant-flag t
+                                :default-value (377 378)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [343 378])
+                            ("MP_FLAG_GRUN_PATH" variable
+                               (:constant-flag t
+                                :default-value (424 425)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [390 425])
+                            ("MP_FLAG_ABSTRACT_DRAW_REGIONS" variable
+                               (:constant-flag t
+                                :default-value (472 473)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [438 473])
+                            ("MP_FLAG_ABSTRACT_DRAW_EDGES" variable
+                               (:constant-flag t
+                                :default-value (519 520)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [485 520])
+                            ("MP_FLAG_SIM_DRAW_GOALS" variable
+                               (:constant-flag t
+                                :default-value (567 568)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [533 568])
+                            ("MP_FLAG_SIM_DRAW_OBSTACLES" variable
+                               (:constant-flag t
+                                :default-value (614 615)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [580 615])
+                            ("MP_FLAG_SIM_DRAW_GROUND" variable
+                               (:constant-flag t
+                                :default-value (662 663)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [628 663])
+                            ("MP_FLAG_PLANNER_DRAW_TREE" variable
+                               (:constant-flag t
+                                :default-value (711 712)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [677 712])
+                            ("MP_FLAG_ABSTRACT_DRAW_WEIGHTS" variable
+                               (:constant-flag t
+                                :default-value (760 761)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [726 761])
+                            ("MP_FLAG_ABSTRACT_DRAW_PATH" variable
+                               (:constant-flag t
+                                :default-value (808 809)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [774 809])
+                            ("MP_FLAG_ABSTRACT_DRAW_QUEST" variable
+                               (:constant-flag t
+                                :default-value (863 864)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [829 864])
+                            ("MP_FLAG_ABSTRACT_DRAW_SWEIGHTS" variable
+                               (:constant-flag t
+                                :default-value (911 912)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [877 912]))                          
+                        :type "enum")
+                        (reparse-symbol namespacesubparts) [94 922])
+                    ("MP_PROB_STEER" variable
+                       (:constant-flag t
+                        :default-value "0.75"
+                        :type "double")
+                        (reparse-symbol namespacesubparts) [928 970])
+                    ("MP_GOAL_BIAS" variable
+                       (:constant-flag t
+                        :default-value "0.05"
+                        :type "double")
+                        (reparse-symbol namespacesubparts) [975 1017])
+                    ("MP_DSEL" variable
+                       (:constant-flag t
+                        :default-value "0.95"
+                        :type "double")
+                        (reparse-symbol namespacesubparts) [1022 1064])
+                    ("MP_HEXP" variable
+                       (:constant-flag t
+                        :default-value "8.00"
+                        :type "double")
+                        (reparse-symbol namespacesubparts) [1069 1111])
+                    ("MP_FOLLOW" variable
+                       (:constant-flag t
+                        :default-value "0.10"
+                        :type "double")
+                        (reparse-symbol namespacesubparts) [1116 1158])
+                    ("MP_DTOL_STEER" variable
+                       (:constant-flag t
+                        :default-value "0.50"
+                        :type "double")
+                        (reparse-symbol namespacesubparts) [1163 1205])
+                    ("MP_DTOL_SAMPLE" variable
+                       (:constant-flag t
+                        :default-value "3.50"
+                        :type "double")
+                        (reparse-symbol namespacesubparts) [1210 1252])
+                    ("MP_MIN_NR_STEPS" variable
+                       (:constant-flag t
+                        :default-value "40"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1257 1297])
+                    ("MP_MAX_NR_STEPS" variable
+                       (:constant-flag t
+                        :default-value "80"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1302 1342]))                  
+                :type "namespace")
+                nil [70 1345]))          
+      :file "MPDefaults.hpp"
+      :pointmax 1355
+      :fsize 1354
+      :lastmodtime '(21852 60562 0 0)
+      :unmatched-syntax '((number 916 . 918) (punctuation 914 . 915) (punctuation 913 . 914) (number 868 . 870) (punctuation 866 . 867) (punctuation 865 . 866) (number 813 . 815) (punctuation 811 . 812) (punctuation 810 . 811) (number 765 . 767) (punctuation 763 . 764) (punctuation 762 . 763) (number 716 . 718) (punctuation 714 . 715) (punctuation 713 . 714) (number 667 . 669) (punctuation 665 . 666) (punctuation 664 . 665) (number 619 . 621) (punctuation 617 . 618) (punctuation 616 . 617) (number 572 . 573) (punctuation 570 . 571) (punctuation 569 . 570) (number 524 . 525) (punctuation 522 . 523) (punctuation 521 . 522) (number 477 . 478) (punctuation 475 . 476) (punctuation 474 . 475) (number 429 . 430) (punctuation 427 . 428) (punctuation 426 . 427) (number 382 . 383) (punctuation 380 . 381) (punctuation 379 . 380) (number 335 . 336) (punctuation 333 . 334) (punctuation 332 . 333) (number 288 . 289) (punctuation 286 . 287) (punctuation 285 . 286) (number 241 . 242) (punctuation 239 . 240) (punctuation 238 . 239) (number 194 . 195) (punctuation 192 . 193) (punctuation 191 . 192) (number 147 . 148) (punctuation 145 . 146) (punctuation 144 . 145))
+      :lexical-table 
+        '(("ABETARE__MP_DEFAULTS_HPP_")
+          )
+)
+    (semanticdb-table "MPGoal.hpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ABETARE__MP_GOAL_HPP_" variable (:constant-flag t) nil [39 60])
+            ("Utils/Flags.hpp" include nil nil [62 88])
+            ("Utils/Polygon2D.hpp" include nil nil [89 119])
+            ("Utils/TriMesh.hpp" include nil nil [120 148])
+            ("Abetare" type
+               (:members 
+                  ( ("MPGoal" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [197 204])
+                            ("MPGoal" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [213 218]))                                  
+                                :type ("MPGoal" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [206 224])
+                            ("MPGoal" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [244 249]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [228 255])
+                            ("IsReached" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("p" variable
+                                       (:dereference 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [283 300]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [258 306])
+                            ("SampleRandomPointInside" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("p" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [347 358]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [308 364])
+                            ("GetSomePointInside" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("p" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [400 411]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [366 417])
+                            ("SampleRandomPointInside2D" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("p" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [460 471]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [419 477])
+                            ("GetSomePointInside2D" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("p" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [515 526]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [479 531])
+                            ("UpdateProjPolygon" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [567 572]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [534 578])
+                            ("Draw" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("flag" variable
+                                       (:constant-flag t
+                                        :type ("Flags" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [602 619])
+                                    ("id" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [620 633]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [582 638])
+                            ("GetVolume" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [666 671]))                                  
+                                :type "double")
+                                (reparse-symbol classsubparts) [641 676])
+                            ("m_poly" variable (:type ("Polygon2D" type (:type "class") nil nil)) (reparse-symbol classsubparts) [679 696])
+                            ("m_tmesh" variable (:type ("TriMesh" type (:type "class") nil nil)) (reparse-symbol classsubparts) [698 716]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [174 723])
+                    ("MPGoal2D" type
+                       (:superclasses 
+                          ( ("MPGoal" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [778 785])
+                            ("MPGoal2D" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [796 801]))                                  
+                                :type ("MPGoal2D" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [787 818])
+                            ("MPGoal2D" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [840 845]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [822 851]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [737 858])
+                    ("MPGoal3D" type
+                       (:superclasses 
+                          ( ("MPGoal" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [905 912])
+                            ("MPGoal3D" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [923 928]))                                  
+                                :type ("MPGoal3D" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [914 945])
+                            ("MPGoal3D" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [967 972]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [949 978]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [864 985])
+                    ("MPGoalPolygon2D" type
+                       (:superclasses 
+                          ( ("MPGoal2D" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1045 1052])
+                            ("MPGoalPolygon2D" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1070 1075]))                                  
+                                :type ("MPGoalPolygon2D" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1054 1094])
+                            ("MPGoalPolygon2D" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1123 1128]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1098 1134])
+                            ("IsReached" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("p" variable
+                                       (:dereference 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [1160 1177]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1137 1221])
+                            ("SampleRandomPointInside" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("p" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [1261 1272]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1224 1319])
+                            ("SampleRandomPointInside2D" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("p" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [1360 1371]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1321 1418])
+                            ("GetSomePointInside" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("p" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [1456 1467]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1422 1509])
+                            ("GetSomePointInside2D" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("p" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [1547 1558]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1511 1600])
+                            ("GetVolume" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1628 1633]))                                  
+                                :type "double")
+                                (reparse-symbol classsubparts) [1603 1669])
+                            ("Draw" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("flag" variable
+                                       (:constant-flag t
+                                        :type ("Flags" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1693 1710])
+                                    ("id" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [1711 1724]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1675 1725]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [995 1732])
+                    ("MPGoalBox3D" type
+                       (:superclasses 
+                          ( ("MPGoal3D" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1789 1796])
+                            ("MPGoalBox3D" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1810 1815]))                                  
+                                :type ("MPGoalBox3D" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1798 1908])
+                            ("MPGoalBox3D" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1933 1938]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1912 1944])
+                            ("IsReached" function
+                               (:arguments 
+                                  ( ("p" variable
+                                       (:dereference 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [1962 1979]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1947 2122])
+                            ("SampleRandomPointInside" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("p" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2162 2173]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2125 2333])
+                            ("SampleRandomPointInside2D" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("p" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2375 2386]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2336 2495])
+                            ("GetSomePointInside" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("p" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2533 2544]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2499 2674])
+                            ("GetSomePointInside2D" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("p" variable
+                                       (:dereference 1
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2713 2724]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2677 2813])
+                            ("UpdateProjPolygon" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2848 2853]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2817 2991])
+                            ("GetVolume" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3020 3025]))                                  
+                                :type "double")
+                                (reparse-symbol classsubparts) [2995 3121])
+                            ("Draw" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("flag" variable
+                                       (:constant-flag t
+                                        :type ("Flags" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3144 3161])
+                                    ("id" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol arg-sub-list) [3162 3175]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3126 3176])
+                            ("m_box" variable
+                               (:dereference 1
+                                :type "double")
+                                (reparse-symbol classsubparts) [3181 3197]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1743 3204]))                  
+                :type "namespace")
+                nil [150 4137]))          
+      :file "MPGoal.hpp"
+      :pointmax 4149
+      :fsize 4148
+      :lastmodtime '(21852 60562 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("ABETARE__MP_GOAL_HPP_")
+          )
+))
+  :file "!home!awells!Development!DIMACS!Code!src!MP!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
