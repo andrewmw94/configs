@@ -1,0 +1,85 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("RTags_15"
+ (filename . "~/llvm/tools/clang/lib/AST/DeclObjC.cpp")
+ (front-context-string . "getLocEnd();\n  r")
+ (rear-context-string . "   return Body->")
+ (position . 32154))
+("RTags_14"
+ (filename . "~/llvm/tools/clang/include/clang/AST/Stmt.h")
+ (front-context-string . "getLocEnd();\n  }")
+ (rear-context-string . "CapturedStmt()->")
+ (position . 72413))
+("RTags_13"
+ (filename . "~/llvm/tools/clang/include/clang/AST/Stmt.h")
+ (front-context-string . "getLocEnd(); }\n\n")
+ (rear-context-string . "ldren[HANDLER]->")
+ (position . 63816))
+("RTags_12"
+ (filename . "~/llvm/tools/clang/include/clang/AST/Stmt.h")
+ (front-context-string . "getLocEnd(); }\n\n")
+ (rear-context-string . "{ return Block->")
+ (position . 62669))
+("RTags_11"
+ (filename . "~/llvm/tools/clang/include/clang/AST/Stmt.h")
+ (front-context-string . "getLocEnd() : Re")
+ (rear-context-string . "Expr ? RetExpr->")
+ (position . 46760))
+("RTags_10"
+ (filename . "~/llvm/tools/clang/include/clang/AST/Stmt.h")
+ (front-context-string . "getLocEnd(); }\n\n")
+ (rear-context-string . " return Target->")
+ (position . 43210))
+("RTags_9"
+ (filename . "~/llvm/tools/clang/include/clang/AST/Stmt.h")
+ (front-context-string . "getLocEnd();\n  }")
+ (rear-context-string . "SubExprs[BODY]->")
+ (position . 40573))
+("RTags_8"
+ (filename . "~/llvm/tools/clang/include/clang/AST/Stmt.h")
+ (front-context-string . "getLocEnd();\n  }")
+ (rear-context-string . "SubExprs[BODY]->")
+ (position . 36106))
+("RTags_7"
+ (filename . "~/llvm/tools/clang/include/clang/AST/Stmt.h")
+ (front-context-string . "getLocEnd();\n  }")
+ (rear-context-string . "SubExprs[COND]->")
+ (position . 34246))
+("RTags_6"
+ (filename . "~/llvm/tools/clang/include/clang/AST/Stmt.h")
+ (front-context-string . "getLocEnd() : Su")
+ (rear-context-string . "SubExprs[BODY]->")
+ (position . 34216))
+("RTags_5"
+ (filename . "~/llvm/tools/clang/include/clang/AST/Stmt.h")
+ (front-context-string . "getLocEnd();\n  }")
+ (rear-context-string . "SubExprs[THEN]->")
+ (position . 30894))
+("RTags_4"
+ (filename . "~/llvm/tools/clang/include/clang/AST/Stmt.h")
+ (front-context-string . "getLocEnd();\n   ")
+ (rear-context-string . "SubExprs[ELSE]->")
+ (position . 30843))
+("RTags_3"
+ (filename . "~/llvm/tools/clang/include/clang/AST/Stmt.h")
+ (front-context-string . "getLocEnd();}\n\n ")
+ (rear-context-string . "return SubStmt->")
+ (position . 28651))
+("RTags_2"
+ (filename . "~/llvm/tools/clang/include/clang/AST/Stmt.h")
+ (front-context-string . "getLocEnd();}\n\n ")
+ (rear-context-string . "return SubStmt->")
+ (position . 26846))
+("RTags_1"
+ (filename . "~/llvm/tools/clang/include/clang/AST/Stmt.h")
+ (front-context-string . "getLocEnd();}\n\n ")
+ (rear-context-string . "return SubStmt->")
+ (position . 25328))
+("RTags_0"
+ (filename . "~/llvm/tools/clang/include/clang/AST/Stmt.h")
+ (front-context-string . "getLocEnd();\n  }")
+ (rear-context-string . "->getSubStmt()->")
+ (position . 24263))
+)
