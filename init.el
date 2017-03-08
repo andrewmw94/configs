@@ -21,6 +21,7 @@
  '(company-tooltip-common ((t (:inherit font-lock-constant-face))))
  '(company-tooltip-selection ((t (:inherit font-lock-function-name-face)))))
 
+
 ;;turn off the annoying beeping sound that warns you of stuff
 (setq ring-bell-function 'ignore)
 
@@ -170,3 +171,12 @@
  '(custom-safe-themes
    (quote
     ("0c29db826418061b40564e3351194a3d4a125d182c6ee5178c237a7364f0ff12" default))))
+
+(setq inferior-lisp-program (executable-find "sbcl"))
+
+
+(defun my/python-mode-hook ()
+  (add-to-list 'company-backends 'company-jedi)
+  (setq jedi:complete-on-dot t))
+
+(add-hook 'python-mode-hook 'my/python-mode-hook)
