@@ -174,9 +174,13 @@
 
 (setq inferior-lisp-program (executable-find "sbcl"))
 
+(require 'slime-autoloads)
+(slime-setup '(slime-fancy))
 
 (defun my/python-mode-hook ()
   (add-to-list 'company-backends 'company-jedi)
   (setq jedi:complete-on-dot t))
 
 (add-hook 'python-mode-hook 'my/python-mode-hook)
+
+(tool-bar-mode -1)
