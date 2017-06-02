@@ -184,3 +184,4 @@
 (add-hook 'python-mode-hook 'my/python-mode-hook)
 
 (tool-bar-mode -1)
+(show-paren-mode 1)
