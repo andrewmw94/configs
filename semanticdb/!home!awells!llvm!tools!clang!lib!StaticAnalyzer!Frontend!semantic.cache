@@ -1,0 +1,190 @@
+;; Object Frontend/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Frontend/"
+  :tables
+  (list
+    (semanticdb-table "CheckerRegistration.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("clang/StaticAnalyzer/Frontend/CheckerRegistration.h" include nil nil [494 556])
+            ("clang/Basic/Diagnostic.h" include nil nil [557 592])
+            ("clang/Frontend/FrontendDiagnostic.h" include nil nil [593 639])
+            ("clang/StaticAnalyzer/Checkers/ClangCheckers.h" include nil nil [640 696])
+            ("clang/StaticAnalyzer/Core/AnalyzerOptions.h" include nil nil [697 751])
+            ("clang/StaticAnalyzer/Core/CheckerManager.h" include nil nil [752 805])
+            ("clang/StaticAnalyzer/Core/CheckerOptInfo.h" include nil nil [806 859])
+            ("clang/StaticAnalyzer/Core/CheckerRegistry.h" include nil nil [860 914])
+            ("clang/StaticAnalyzer/Frontend/FrontendActions.h" include nil nil [915 973])
+            ("llvm/ADT/SmallVector.h" include nil nil [974 1007])
+            ("llvm/Support/DynamicLibrary.h" include nil nil [1008 1048])
+            ("llvm/Support/Path.h" include nil nil [1049 1079])
+            ("llvm/Support/raw_ostream.h" include nil nil [1080 1117])
+            ("memory" include (:system-flag t) nil [1118 1135])
+            ("clang" using (:type ("clang" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1137 1159])
+            ("ento" using (:type ("ento" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1160 1181])
+            ("llvm::sys::DynamicLibrary" using (:type ("llvm::sys::DynamicLibrary" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [1182 1214])
+            ("unnamed" type
+               (:members 
+                  ( ("ClangCheckerRegistry" type
+                       (:superclasses 
+                          ( ("CheckerRegistry" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("RegisterCheckersFn" function
+                               (:prototype-flag t
+                                :function-pointer t
+                                :arguments 
+                                  ( ("" variable
+                                       (:reference 1
+                                        :type ("CheckerRegistry" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1319 1337]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1292 1338])
+                            ("isCompatibleAPIVersion" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("versionString" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [1377 1403]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1342 1404])
+                            ("warnIncompatible" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("diags" variable
+                                       (:pointer 1
+                                        :type ("DiagnosticsEngine" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1436 1461])
+                                    ("pluginPath" variable (:type ("StringRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1462 1483])
+                                    ("pluginAPIVersion" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [1515 1544]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1407 1545])
+                            ("public" label nil (reparse-symbol classsubparts) [1547 1554])
+                            ("ClangCheckerRegistry" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("plugins" variable (:type ("ArrayRef" type
+                                         (:template-specifier 
+                                            ( ("std::string" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol arg-sub-list) [1578 1608])
+                                    ("diags" variable
+                                       (:pointer 1
+                                        :default-value "nullptr"
+                                        :type ("DiagnosticsEngine" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1632 1666]))                                  
+                                :type ("ClangCheckerRegistry" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1557 1668]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1228 1671]))                  
+                :type "namespace")
+                nil [1216 1674])
+            ("ClangCheckerRegistry" function
+               (:constructor-flag t
+                :parent "ClangCheckerRegistry"
+                :arguments 
+                  ( ("plugins" variable (:type ("ArrayRef" type
+                         (:template-specifier 
+                            ( ("std::string" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [1746 1776])
+                    ("diags" variable
+                       (:pointer 1
+                        :type ("DiagnosticsEngine" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1820 1845]))                  
+                :type ("ClangCheckerRegistry" type (:type "class") nil nil))
+                nil [1703 2831])
+            ("isCompatibleAPIVersion" function
+               (:parent "ClangCheckerRegistry"
+                :arguments 
+                  ( ("versionString" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2883 2909]))                  
+                :type "bool")
+                nil [2833 3193])
+            ("warnIncompatible" function
+               (:parent "ClangCheckerRegistry"
+                :arguments 
+                  ( ("diags" variable
+                       (:pointer 1
+                        :type ("DiagnosticsEngine" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3239 3264])
+                    ("pluginPath" variable (:type ("StringRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3309 3330])
+                    ("pluginAPIVersion" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3375 3404]))                  
+                :type "void")
+                nil [3195 3712])
+            ("createCheckerManager" function
+               (:parent "ento"
+                :arguments 
+                  ( ("opts" variable
+                       (:reference 1
+                        :type ("AnalyzerOptions" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3773 3795])
+                    ("langOpts" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("LangOptions" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3796 3824])
+                    ("plugins" variable (:type ("ArrayRef" type
+                         (:template-specifier 
+                            ( ("std::string" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [3852 3882])
+                    ("diags" variable
+                       (:reference 1
+                        :type ("DiagnosticsEngine" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3910 3935]))                  
+                :type ("std::unique_ptr" type
+                     (:template-specifier 
+                        ( ("CheckerManager" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [3714 4806])
+            ("printCheckerHelp" function
+               (:parent "ento"
+                :arguments 
+                  ( ("out" variable
+                       (:reference 1
+                        :type ("raw_ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4836 4853])
+                    ("plugins" variable (:type ("ArrayRef" type
+                         (:template-specifier 
+                            ( ("std::string" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [4854 4884]))                  
+                :type "void")
+                nil [4808 5065]))          
+      :file "CheckerRegistration.cpp"
+      :pointmax 5066
+      :fsize 5065
+      :lastmodtime '(22322 35030 952685 844000)
+      :unmatched-syntax '((TYPEDEF 1284 . 1291))))
+  :file "!home!awells!llvm!tools!clang!lib!StaticAnalyzer!Frontend!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

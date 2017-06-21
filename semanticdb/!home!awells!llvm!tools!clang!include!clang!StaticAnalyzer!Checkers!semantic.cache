@@ -1,0 +1,42 @@
+;; Object Checkers/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Checkers/"
+  :tables
+  (list
+    (semanticdb-table "ClangCheckers.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("LLVM_CLANG_STATICANALYZER_CHECKERS_CLANGCHECKERS_H" variable (:constant-flag t) nil [410 460])
+            ("clang" type
+               (:members 
+                  ( ("ento" type
+                       (:members 
+                          ( ("CheckerRegistry" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [497 519])
+                            ("registerBuiltinCheckers" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("registry" variable
+                                       (:reference 1
+                                        :type ("CheckerRegistry" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [550 576]))                                  
+                                :type "void")
+                                (reparse-symbol namespacesubparts) [521 577]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [480 580]))                  
+                :type "namespace")
+                nil [462 604]))          
+      :file "ClangCheckers.h"
+      :pointmax 636
+      :fsize 635
+      :lastmodtime '(22322 35050 706392 751000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("LLVM_CLANG_STATICANALYZER_CHECKERS_CLANGCHECKERS_H")
+          )
+))
+  :file "!home!awells!llvm!tools!clang!include!clang!StaticAnalyzer!Checkers!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
