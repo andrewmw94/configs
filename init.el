@@ -172,10 +172,12 @@
    (quote
     ("0c29db826418061b40564e3351194a3d4a125d182c6ee5178c237a7364f0ff12" default))))
 
+
+(load (expand-file-name "~/quicklisp/slime-helper.el"))
 (setq inferior-lisp-program (executable-find "sbcl"))
 
-(require 'slime-autoloads)
-(slime-setup '(slime-fancy))
+;(require 'slime-autoloads)
+;(slime-setup '(slime-fancy))
 
 (show-paren-mode 1)
 
